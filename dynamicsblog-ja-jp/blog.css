@@ -1,0 +1,359 @@
+body {
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.2;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    color: #767676;
+    background-color: #EBEBEB;
+}
+
+#site-navigation .navbar-nav.open>li>a {
+    background-color: transparent;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+a {
+    font-family: Meiryo, Arial, "Hiragino Kaku Gothic ProN", "Osaka", sans-serif;
+}
+
+.pre-sales-navigation-background {
+    margin-top: -1px;
+}
+
+.pre-sales-user-navigation .register a {
+    color: #0078d7 !important;
+}
+
+#site-navigation .navbar-nav li a:hover {
+    background-color: transparent !important;
+    color: #0056b5 !important;
+}
+
+#site-navigation .navbar-nav li.active a,
+#site-navigation .navbar-nav li.active a:hover {
+    background-color: transparent !important;
+    color: #0078d7 !important;
+}
+
+#site-navigation .navbar-nav li div.user-info a:hover {
+    background-color: #eeeeee !important;
+    background: #eeeeee !important;
+}
+
+#mobile-navigation .mobile-navigation-search>span {
+    background-position: -17px -516px;
+}
+
+#mobile-navigation .mobile-navigation-search {
+    display: inline-block;
+    vertical-align: top;
+    padding: 8px;
+    padding-right: 16px;
+    margin-top: -1px;
+}
+
+#mobile-navigation .mobile-navigation-menu {
+    display: inline-block;
+    vertical-align: top;
+    padding: 6px;
+    margin-right: 0px;
+    margin-top: 2px;
+}
+
+#mobile-navigation {
+    margin-top: 55px;
+}
+
+#mobile-navigation .mobile-navigation-search>span {
+    background-position: 0 -1062px;
+    height: 18px;
+    width: 18px;
+}
+
+#mobile-navigation .mobile-navigation-menu>span {
+    background-position: 0 -1080px;
+    width: 23px;
+}
+
+#site-search #site-search-button>span {
+    background-position: -19px -1062px;
+    margin-top: 8px;
+    width: 18px;
+    height: 18px;
+    margin-right: -4px;
+}
+
+.navbar-nav li {
+    font-size: 16px;
+}
+
+.admin-bar {
+    display:
+}
+
+#site-header div.content {
+    margin-right: -.7%;
+    margin-top: 1px;
+}
+
+@media(min-width:541px) {
+    #site-navigation .navbar-nav {
+        height: 42px;
+        overflow: hidden;
+        margin-bottom: 0px !important;
+    }
+    .pre-sales-navigation-background {
+        display: inherit;
+    }
+    #site-navigation .dropdown-menu {
+        position: absolute;
+    }
+    .header-fragments .container {
+        width: 96% !important;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    /*Hacks for enhanced blogs to match msCom site */
+    .header-fragments .container,
+    .header-fragments .row {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    nav {
+        margin-top: -4px;
+        margin-left: -19px !important;
+        margin-top: -5px;
+    }
+    .navbar-nav li {
+        font-size: 16px;
+    }
+    #site-navigation .navbar {
+        display: block !important;
+        margin-bottom: 0;
+        margin-left: -1.93em !important;
+    }
+    .navbar-nav li a {
+        text-decoration: none;
+        padding: 0 .93em;
+        color: #1a1a1a;
+        font-size: 1em;
+        white-space: nowrap;
+        color: #1a1a1a !important;
+    }
+    #site-navigation .navbar-nav>li>a {
+        padding: 12px 15px;
+        color: #4f4f4f;
+        padding-bottom: 14px;
+    }
+    #site-title {
+        margin-top: 9px;
+        margin-left: -1px;
+        font-size: 1.875em;
+    }
+    #site-header hr {
+        margin: 0;
+        border-top: .3em solid #eee;
+    }
+    #site-search input {
+        max-width: 464px !important;
+        padding: 5px;
+        font-size: .6875em;
+        width: 79.5% !important;
+        border: solid 1px #969696;
+        height: 26px;
+        margin-right: 3px;
+        margin-top: 4px;
+    }
+    #site-header-navigation {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: right;
+        font-size: .8125em;
+        line-height: 1.454545em;
+        margin-right: 4px;
+    }
+    li.phone {
+        margin-right: 6px;
+    }
+    .enhanced-logo {
+        margin-top: 13px;
+        margin-left: -3px;
+        margin-bottom: 5px;
+    }
+}
+
+@media(min-width:1180px) {
+    #site-title {
+        margin-top: 9px;
+        margin-left: -3px;
+    }
+    #site-navigation .navbar {
+        display: block !important;
+        margin-bottom: 0;
+        margin-left: -30px !important;
+    }
+}
+
+@media (max-width: 1250px) {
+    .enhanced-logo {
+        margin-top: 13px;
+        margin-left: -.05em;
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 719px) {
+    .navbar-nav {
+        margin-bottom: -13px !important;
+        margin: 12.25px -0px;
+    }
+    nav {
+        margin-top: -17px !important;
+    }
+}
+
+@media (max-width: 540px) {
+    .pre-sales-navigation-background {
+        display: none;
+    }
+    #site-header hr {
+        margin-top: -10px;
+    }
+    #site-title {
+        font-size: 20px;
+        margin-left: 2%;
+        margin-top: -2px;
+    }
+    .enhanced-logo {
+        margin-top: 13px;
+        margin-left: 2%;
+        margin-bottom: 15px;
+    }
+}
+
+@media(min-width: 540px) {
+    .navbar-nav li {
+        font-size: 16px;
+        float: left;
+    }
+    .dropdown-menu li {
+        float: none;
+    }
+}
+
+@media(max-width:1005px) {
+    #site-search #site-search-button {
+        /* margin-top:-25px;*/
+    }
+}
+
+.dropdown-menu li {
+    display: block !important;
+}
+
+#site-navigation .navbar-nav li .dropdown-menu li a:hover {
+    background-color: #eeeeee !important;
+}
+
+#site-navigation .dropdown-menu li {
+    margin-bottom: .469em;
+}
+
+#site-navigation .dropdown-menu {
+    padding-top: 35px;
+}
+
+#site-navigation .dropdown-menu a {
+    color: #0078d7 !important;
+    text-decoration: none;
+}
+
+#site-navigation .dropdown-menu a:hover {
+    color: #0056b5 !important;
+    text-decoration: underline;
+}
+
+@media (max-width: 540px) {
+    #site-header hr {
+        margin-top: -10px;
+    }
+    #site-title {
+        font-size: 20px;
+        margin-left: 2%;
+        margin-top: -2px;
+    }
+    .enhanced-logo {
+        margin-top: 13px;
+        margin-left: 2%;
+        margin-bottom: 15px;
+    }
+    #site-navigation .navbar-nav.open {
+        margin-left: 1px;
+        margin-top: 12px;
+    }
+    #site-navigation .navbar-nav.open>li>ul>li>a {
+        background-color: #1570a6 !important;
+        color: #ffffff !important;
+    }
+    #site-navigation .dropdown-menu>li {
+        padding: 0 30px 0 5px;
+    }
+    .pre-sales-navigation .navbar-nav.open .dropdown-menu {
+        background-color: #083047 !important;
+    }
+    #site-navigation .navbar-nav.open>li>ul>li>a {
+        color: white !important;
+        background-color: transparent !important;
+    }
+    #site-navigation .navbar-nav.open>li>ul>li>a {
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+    }
+    #site-navigation .navbar-nav.open>li>ul {
+        background-color: #1570a6 !important;
+        margin-left: 10px;
+        padding-left: 10px;
+    }
+    #site-navigation .navbar-nav.open>li {
+        background-color: #083047 !important;
+    }
+    #site-navigation .navbar-nav.open>li>ul>li>a:hover {
+        background-color: transparent !important;
+    }
+    #site-navigation .navbar-nav.open>li.open>a {
+        background-color: #083047 !important;
+    }
+    #site-navigation .navbar-nav.open>li>a {
+        background-color: #1570a6 !important;
+        color: white !important;
+    }
+    #site-navigation .navbar-nav.open>li>a:hover {
+        background-color: #083047 !important;
+        color: white !important;
+    }
+    #site-navigation .navbar-nav.open {
+        margin-left: 9px;
+        margin-top: 12px;
+    }
+    #site-navigation .navbar-nav.open>li>ul>li {
+        margin-bottom: 1px;
+        padding-left: 10px;
+    }
+    #site-navigation .navbar-nav.open>li>ul>li:first-of-type {
+        padding-top: 15px;
+    }
+    #site-navigation .navbar-nav.open>li>ul>li:last-of-type {
+        padding-bottom: 15px;
+    }
+    .user-info a {
+        color: white !important;
+    }
+}
+
+;
