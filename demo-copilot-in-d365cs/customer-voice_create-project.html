@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+  Original is here: <a
+    href="https://learn.microsoft.com/en-us/dynamics365/customer-voice/create-project">https://learn.microsoft.com/en-us/dynamics365/customer-voice/create-project</a>
+  <div class="content ">
+
+
+    <h1 id="create-a-project">Create a project</h1>
+
+
+    <div class="display-flex justify-content-space-between align-items-center flex-wrap-wrap page-metadata-container">
+      <div class="margin-right-xxs">
+        <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
+          <li>
+            Article </li>
+
+          <li class="visibility-hidden-visual-diff">
+            <time class="" data-article-date="" aria-label="Article review date" datetime="2022-02-15T00:00:00.000Z"
+              data-article-date-source="calculated">02/15/2022</time>
+          </li>
+          <li class="contributors-holder display-none-print">
+            <button aria-label="View all contributors" class="contributors-button link-button"
+              data-bi-name="contributors" title="View all contributors">
+              4 contributors
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <div id="user-feedback" class="margin-block-xxs display-none-print" data-hide-on-archived="">
+        <button id="user-feedback-button" data-test-id="conceptual-feedback-button"
+          class="button button-sm button-clear button-primary" type="button" data-bi-name="user-feedback-button"
+          data-user-feedback-button="">
+          <span class="icon" aria-hidden="true">
+            <span class="docon docon-like"></span>
+          </span>
+          <span>Feedback</span>
+        </button>
+      </div>
+    </div>
+
+    <div id="ms--content-well-notifications" data-bi-name="content-well-notification"></div>
+
+    <nav id="center-doc-outline" class="doc-outline display-none-print margin-bottom-sm" data-bi-name="intopic toc"
+      role="navigation" aria-label="In this article"><!---->
+      <h2 id="ms--in-this-article" class="title is-6 margin-block-xs"><!---->In this article<!----></h2>
+      <ol id="content-well-in-this-article-list" class="border-left padding-left-xxs" aria-live="polite"
+        aria-relevant="additions">
+        <!---->
+        <li class="">
+          <a href="#create-a-project-from-a-template"><!---->Create a project from a template<!----></a>
+        </li>
+        <!---->
+        <li class="">
+          <a href="#create-a-project-from-the-blank-template"><!---->Create a project from the blank template<!----></a>
+        </li>
+        <!---->
+      </ol>
+      <!---->
+    </nav>
+
+    <!-- <content> -->
+    <p>A <em>project</em> is a container that consists of surveys, satisfaction metrics, email templates, Power Automate
+      flows, and reports. You can create, distribute, and analyze a survey by creating a project. You can create a
+      project by using a ready-to-use template or by using a blank template to create the project from scratch.</p>
+    <p>Dynamics 365 Customer Voice offers ready-to-use survey feedback project templates. Each project template includes
+      survey questions, preconfigured satisfaction metrics, email templates, and Power Automate flows for Dynamics 365
+      business applications. The available project templates are:</p>
+    <ul>
+      <li>
+        <p><strong>Periodic customer feedback</strong>: This template is based on Forrester Research customer experience
+          best practices and includes questions to collect customer sentiment at regular intervals. It also consists of
+          a preconfigured email template and the following satisfaction metrics:</p>
+        <ul>
+          <li>
+            <p><strong>Customer sentiment</strong>: A sentiment metric that helps you to identify customer sentiment.
+            </p>
+          </li>
+          <li>
+            <p><strong>Customer satisfaction</strong>: A satisfaction metric that helps you to measure the level of
+              customer satisfaction.</p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p><strong>Order delivery</strong>: This template includes questions to collect timely feedback after an order
+          is delivered. It consists of a preconfigured email template and the following satisfaction metrics:</p>
+        <ul>
+          <li>
+            <p><strong>Customer satisfaction</strong>: A satisfaction metric that helps you to measure the level of
+              customer satisfaction.</p>
+          </li>
+          <li>
+            <p><strong>Net Promoter Score</strong>: An NPS metric that helps you to measure customer loyalty.</p>
+          </li>
+          <li>
+            <p><strong>Product sentiment</strong>: A sentiment metric that helps you to identify customer sentiment.</p>
+          </li>
+        </ul>
+        <p>The <strong>Send a survey when an order is fulfilled in Dynamics 365</strong> Power Automate flow is created
+          automatically when you create a project from this template. The survey is sent to the customer when an order
+          is fulfilled in Dynamics 365, and the response is automatically integrated with the order and customer
+          records. To see the flow, go to <a href="https://flow.microsoft.com"
+            data-linktype="external">flow.microsoft.com</a> and select <strong>My flows</strong> in the left pane. The
+          flow is created in the inactive state. You must turn on the flow to use it. You can also customize the flow as
+          per your requirement in Power Automate and then turn on the flow to start using it.</p>
+      </li>
+      <li>
+        <p><strong>Service visit</strong>: This template includes questions to collect timely feedback following a
+          customer visit scheduled with the Dynamics 365 Field Service application. The feedback is automatically
+          integrated with the customer visit record in Dynamics 365, so you can get insights including trends and
+          specific follow-up actions to make sure customer issues are addressed in a timely manner. It also consists of
+          a preconfigured email template and the following satisfaction metrics:</p>
+        <ul>
+          <li>
+            <p><strong>Customer satisfaction</strong>: A satisfaction metric that helps you to measure the level of
+              customer satisfaction.</p>
+          </li>
+          <li>
+            <p><strong>Customer sentiment</strong>: A sentiment metric that helps you to identify customer sentiment.
+            </p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p><strong>Support</strong>: This template includes questions that provides an out-of-the-box, end-to-end
+          solution for measuring customer satisfaction for your Dynamics 365 case management process. It consists of a
+          preconfigured email template and the following satisfaction metrics:</p>
+        <ul>
+          <li>
+            <p><strong>Customer sentiment</strong>: A sentiment metric that helps you to identify customer sentiment.
+            </p>
+          </li>
+          <li>
+            <p><strong>Customer satisfaction</strong>: A satisfaction metric that helps you to measure the level of
+              customer satisfaction.</p>
+          </li>
+        </ul>
+        <p>The <strong>Send a survey when a case is resolved in Dynamics 365</strong> Power Automate flow is created
+          automatically when you create a project from this template. The survey is sent to the customer when a case is
+          resolved in Dynamics 365. To see the flow, go to <a href="https://flow.microsoft.com"
+            data-linktype="external">flow.microsoft.com</a> and select <strong>My flows</strong> in the left pane. The
+          flow is created in the inactive state. You must turn on the flow to use it. You can also customize the flow as
+          per your requirement in Power Automate and then turn on the flow to start using it.</p>
+      </li>
+    </ul>
+    <p>Dynamics 365 Customer Voice also includes a <strong>Blank</strong> template you can use to create a survey from
+      scratch and configure it in accordance with your requirements. This template doesn't contain any preconfigured
+      survey questions, workflows, or satisfaction metrics.</p>
+    <div class="alert is-primary">
+      <p class="alert-title"><span class="docon docon-status-info-outline" aria-hidden="true"></span> Important</p>
+      <p>Projects, email templates, and satisfaction metrics are primarily based out of Microsoft Dataverse. Refreshing
+        data on Dataverse environment with another will break Customer Voice projects and surveys on the refreshed
+        environment.</p>
+    </div>
+    <div class="heading-wrapper" data-heading-level="h2"><a class="anchor-link docon docon-link"
+        href="#create-a-project-from-a-template" aria-label="Section titled: Create a project from a template"></a>
+      <h2 id="create-a-project-from-a-template" class="heading-anchor">Create a project from a template</h2>
+    </div>
+    <p>Creating a project from a template helps you quickly get started with little or no customization. The templates
+      include survey questions that are based on industry best practices and have been curated by subject-matter
+      experts.</p>
+    <ol>
+      <li>
+        <p>Sign in to <a href="https://customervoice.microsoft.com/" data-linktype="external">Dynamics 365 Customer
+            Voice</a>.</p>
+      </li>
+      <li>
+        <p>On the <strong>All projects</strong> tab, select <strong>New project</strong>.</p>
+        <p><img src="media/new-project-button.png" alt="New project button." title="New project button"
+            data-linktype="relative-path"></p>
+        <p>The <strong>Project template</strong> page is displayed with the available project templates.</p>
+        <p><img src="media/project-templates.png" alt="Available project templates." title="Available project templates"
+            data-linktype="relative-path"></p>
+      </li>
+      <li>
+        <p>To see the survey questions in a project template, hover over the template, and then select
+          <strong>Preview</strong> <img src="media/preview-icon.png" alt="Preview." data-linktype="relative-path">.</p>
+      </li>
+      <li>
+        <p>Select the required project template, and then select <strong>Next</strong>.</p>
+      </li>
+      <li>
+        <p>On the <strong>Survey location</strong> page, select an environment to create the project in. To see all
+          environments, select <strong>See all environments</strong>.</p>
+        <p><img src="media/survey-location.png" alt="Select a survey location." title="Select a survey location"
+            data-linktype="relative-path"></p>
+      </li>
+      <li>
+        <p>In the <strong>All environments</strong> window, select the environment you want, and then select
+          <strong>Select and close</strong>.</p>
+      </li>
+      <li>
+        <p>On the <strong>Survey location</strong> page, select <strong>Create</strong>.</p>
+      </li>
+    </ol>
+    <p>The project will be created with survey questions, satisfaction metrics, and Power Automate flows. You can
+      further configure the survey to meet your needs, or <a href="send-survey" data-linktype="relative-path">send it
+        as-is</a>.</p>
+    <div class="heading-wrapper" data-heading-level="h2"><a class="anchor-link docon docon-link"
+        href="#create-a-project-from-the-blank-template"
+        aria-label="Section titled: Create a project from the blank template"></a>
+      <h2 id="create-a-project-from-the-blank-template" class="heading-anchor">Create a project from the blank template
+      </h2>
+    </div>
+    <p>Creating a project from the blank template gives you the freedom to choose survey questions, create satisfaction
+      metrics, email templates, and Power Automate flows.</p>
+    <ol>
+      <li>
+        <p>Sign in to <a href="https://customervoice.microsoft.com/" data-linktype="external">Dynamics 365 Customer
+            Voice</a>.</p>
+      </li>
+      <li>
+        <p>On the <strong>All projects</strong> tab, select <strong>New project</strong>.</p>
+      </li>
+      <li>
+        <p>On the <strong>Project template</strong> page, select <strong>Blank</strong>.</p>
+      </li>
+      <li>
+        <p>Select <strong>Next</strong>.</p>
+      </li>
+      <li>
+        <p>On the <strong>Survey location</strong> page, select an environment to create the project in. To see all
+          environments, select <strong>See all environments</strong>.</p>
+      </li>
+      <li>
+        <p>In the <strong>All environments</strong> window, select the environment you want, and then select
+          <strong>Select and close</strong>.</p>
+      </li>
+      <li>
+        <p>On the <strong>Survey location</strong> page, select <strong>Create</strong>.</p>
+      </li>
+    </ol>
+    <p>The project will be created with an empty survey. You can now add questions and customize it the way you want.
+    </p>
+    <div class="heading-wrapper" data-heading-level="h3"><a class="anchor-link docon docon-link" href="#see-also"
+        aria-label="Section titled: See also"></a>
+      <h3 id="see-also" class="heading-anchor">See also</h3>
+    </div>
+    <p><a href="create-survey" data-linktype="relative-path">Create a survey</a><br>
+      <a href="manage-surveys" data-linktype="relative-path">Manage surveys</a><br>
+      <a href="manage-projects" data-linktype="relative-path">Manage projects</a>
+    </p>
+
+  </div>
+</body>
+
+</html>

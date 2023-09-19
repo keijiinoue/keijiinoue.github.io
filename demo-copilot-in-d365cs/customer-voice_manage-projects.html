@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+  Original is here: <a
+    href="https://learn.microsoft.com/en-us/dynamics365/customer-voice/manage-projects">https://learn.microsoft.com/en-us/dynamics365/customer-voice/manage-projects</a>
+  <div class="content ">
+
+
+    <h1 id="manage-projects">Manage projects</h1>
+
+
+    <div class="display-flex justify-content-space-between align-items-center flex-wrap-wrap page-metadata-container">
+      <div class="margin-right-xxs">
+        <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
+          <li>
+            Article </li>
+
+          <li class="visibility-hidden-visual-diff">
+            <time class="" data-article-date="" aria-label="Article review date" datetime="2022-06-24T08:00:00.000Z"
+              data-article-date-source="calculated">06/24/2022</time>
+          </li>
+          <li class="contributors-holder display-none-print">
+            <button aria-label="View all contributors" class="contributors-button link-button"
+              data-bi-name="contributors" title="View all contributors">
+              4 contributors
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <div id="user-feedback" class="margin-block-xxs display-none-print" data-hide-on-archived="">
+        <button id="user-feedback-button" data-test-id="conceptual-feedback-button"
+          class="button button-sm button-clear button-primary" type="button" data-bi-name="user-feedback-button"
+          data-user-feedback-button="">
+          <span class="icon" aria-hidden="true">
+            <span class="docon docon-like"></span>
+          </span>
+          <span>Feedback</span>
+        </button>
+      </div>
+    </div>
+
+    <div id="ms--content-well-notifications" data-bi-name="content-well-notification"></div>
+
+    <nav id="center-doc-outline" class="doc-outline display-none-print margin-bottom-sm" data-bi-name="intopic toc"
+      role="navigation" aria-label="In this article"><!---->
+      <h2 id="ms--in-this-article" class="title is-6 margin-block-xs"><!---->In this article<!----></h2>
+      <ol id="content-well-in-this-article-list" class="border-left padding-left-xxs" aria-live="polite"
+        aria-relevant="additions">
+        <!---->
+        <li class="">
+          <a href="#rename-a-project"><!---->Rename a project<!----></a>
+        </li>
+        <!---->
+        <li class="">
+          <a href="#copy-a-project"><!---->Copy a project<!----></a>
+        </li>
+        <!---->
+        <li class="">
+          <a href="#share-a-project"><!---->Share a project<!----></a>
+        </li>
+        <!---->
+        <li class="">
+          <a href="#update-a-project"><!---->Update a project<!----></a>
+        </li>
+        <!---->
+        <li class="">
+          <a href="#delete-a-project"><!---->Delete a project<!----></a>
+        </li>
+        <!---->
+      </ol>
+      <!---->
+    </nav>
+
+    <!-- <content> -->
+    <p>After you've created the projects you need, they're available on the <strong>All projects</strong> tab. The
+      following information is displayed:</p>
+    <ul>
+      <li><strong>Name</strong>: The name of the project.</li>
+      <li><strong>Modified date</strong>: The date on which the project was modified.</li>
+      <li><strong>Surveys</strong>: The number of surveys in the project.</li>
+      <li><strong>Responses</strong>: The total number of responses received across all surveys in the project.</li>
+      <li><strong>Environment</strong>: The environment in which the project was created.</li>
+    </ul>
+    <p>You can perform the following actions:</p>
+    <ul>
+      <li><strong>Rename</strong>: Rename your project title.</li>
+      <li><strong>Copy</strong>: Create a copy of your project in the same or different environment.</li>
+      <li><strong>Share</strong>: Share your project with other people for collaboration.</li>
+      <li><strong>Update</strong>: Update your project with a copy of the same project.</li>
+      <li><strong>Delete</strong>: Delete a project that you don't need anymore.</li>
+    </ul>
+    <div class="heading-wrapper" data-heading-level="h2"><a class="anchor-link docon docon-link"
+        href="#rename-a-project" aria-label="Section titled: Rename a project"></a>
+      <h2 id="rename-a-project" class="heading-anchor">Rename a project</h2>
+    </div>
+    <ol>
+      <li>
+        <p>Sign in to <a href="https://customervoice.microsoft.com/" data-linktype="external">Dynamics 365 Customer
+            Voice</a>.</p>
+      </li>
+      <li>
+        <p>On the <strong>All projects</strong> tab, hover over the project you want to rename, select vertical ellipsis
+          <img src="media/project-options.png" alt="Project options." title="Project options"
+            data-linktype="relative-path">, and then select <strong>Rename</strong>.</p>
+      </li>
+      <li>
+        <p>In the <strong>Rename Project</strong> dialog box, enter a new name, and then select <strong>Rename</strong>.
+        </p>
+        <p><img src="media/rename-project.png" alt="Rename a project." title="Rename a project"
+            data-linktype="relative-path"></p>
+      </li>
+    </ol>
+    <div class="heading-wrapper" data-heading-level="h2"><a class="anchor-link docon docon-link" href="#copy-a-project"
+        aria-label="Section titled: Copy a project"></a>
+      <h2 id="copy-a-project" class="heading-anchor">Copy a project</h2>
+    </div>
+    <p>You can create a copy of your project in the same environment or a different environment. Dynamics 365 Customer
+      Voice gives the new project the same name as the existing project and appends <code>- copy</code> to it. You can
+      rename the project if you want.</p>
+    <p><strong>What's copied to the new project?</strong></p>
+    <ul>
+      <li><strong>Surveys</strong>: Surveys, along with their customizations, are copied as a new instance to the new
+        project.</li>
+      <li><strong>Satisfaction metrics</strong>: All satisfaction metrics that were configured for their respective
+        questions are copied to the new project. The satisfaction metrics retain their mappings with the questions in
+        the newly created surveys.</li>
+      <li><strong>Power Automate flows</strong>: All the Power Automate flows configured for the project are copied to
+        the new project.</li>
+      <li><strong>Email templates</strong>: All email templates configured for the surveys are copied to the new
+        project.</li>
+    </ul>
+    <p><strong>What isn't copied to the new project?</strong></p>
+    <p>Survey response data and satisfaction metrics data aren't copied to the new project.</p>
+    <p><strong>To copy a project</strong></p>
+    <ol>
+      <li>
+        <p>Sign in to <a href="https://customervoice.microsoft.com/" data-linktype="external">Dynamics 365 Customer
+            Voice</a>.</p>
+      </li>
+      <li>
+        <p>On the <strong>All projects</strong> tab, hover over the project you want to copy, select <img
+            src="media/project-options.png" alt="Project options." title="Project options"
+            data-linktype="relative-path">, and then select <strong>Copy</strong>.</p>
+        <p>The <strong>Copy project to</strong> screen is displayed.</p>
+      </li>
+      <li>
+        <p>Do one of the following:</p>
+        <ul>
+          <li>
+            <p>To copy your project in the same environment you're currently working in, select the environment listed
+              under <strong>Current location</strong>.</p>
+            <p><img src="media/copy-project-current.png" alt="Copy your project in the same environment."
+                title="Copy your project in the same environment" data-linktype="relative-path"></p>
+          </li>
+          <li>
+            <p>To copy your project to a different environment, expand <strong>All locations</strong>, and then select
+              an environment.</p>
+            <p><img src="media/copy-project-other.png" alt="Copy your project to a different environment."
+                title="Copy your project to a different environment" data-linktype="relative-path"></p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>After selecting an environment, select <strong>Copy</strong>. A notification is displayed in the upper-right
+          corner when the project is copied to the selected location.</p>
+      </li>
+    </ol>
+    <div class="heading-wrapper" data-heading-level="h2"><a class="anchor-link docon docon-link" href="#share-a-project"
+        aria-label="Section titled: Share a project"></a>
+      <h2 id="share-a-project" class="heading-anchor">Share a project</h2>
+    </div>
+    <p>You can share your project with multiple people in your organization so they can collaborate on the structure and
+      layout of surveys within the project. The people with whom the project is shared become the co-owners of the
+      shared project. The projects that are shared with you are available on the <strong>All projects</strong> tab.</p>
+    <p>When you share a project, a <a
+        href="/en-us/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal"
+        data-linktype="absolute-path">Microsoft 365 group</a> is created in Azure Active Directory and the project
+      co-owners are added as members of the group. When you remove a co-owner from the project, the co-owner is removed
+      from the Azure Active Directory group. When you remove all co-owners from the project, the group is retained with
+      you as its only member. When a Microsoft 365 group is created, a Microsoft Dataverse team (of type <a
+        href="/en-us/power-platform/admin/manage-teams#about-group-teams" data-linktype="absolute-path">Azure Active
+        Directory group</a>) is created. The Dataverse team is assigned the ownership of the project and survey data.
+    </p>
+    <p><strong>What can a co-owner do?</strong></p>
+    <p>A project co-owner has the same level of permissions as the project owner. This means a co-owner can create,
+      edit, update, delete, and share the project.</p>
+    <p><strong>What can't a co-owner do?</strong></p>
+    <ul>
+      <li>
+        <p>A co-owner cannot remove the project creator from a shared project.</p>
+      </li>
+      <li>
+        <p>A co-owner can't delete a survey that was created by another user. The survey can be deleted only by the user
+          who created it. If a co-owner tries to delete a project that contains a survey created by another user, an
+          error is displayed.</p>
+      </li>
+      <li>
+        <p>A co-owner can't move a survey that was created by another user. The survey can be moved only by the user who
+          created it. If a co-owner tries to move a survey that is created by another user, an error is displayed.</p>
+      </li>
+    </ul>
+    <p><strong>How are the responses shared?</strong></p>
+    <p>If a project contains responses, a co-owner can see all responses under <strong>Reports</strong> in the left
+      pane. In the Customer Voice survey responses entity, only those responses that are received after the project was
+      shared will be shared with co-owners. Projects and surveys are owned by the Microsoft Dataverse team (of type <a
+        href="/en-us/power-platform/admin/manage-teams#about-group-teams" data-linktype="absolute-path">Azure Active
+        Directory group</a>). Only those responses that are received after the project is shared will be owned by the
+      Dataverse team. Old responses will continue to be owned by the project owner.</p>
+    <p><strong>To share a project</strong></p>
+    <ol>
+      <li>
+        <p>Sign in to <a href="https://customervoice.microsoft.com/" data-linktype="external">Dynamics 365 Customer
+            Voice</a>.</p>
+      </li>
+      <li>
+        <p>On the <strong>All projects</strong> tab, hover over the project you want to share, select <img
+            src="media/project-options.png" alt="Project options." title="Project options"
+            data-linktype="relative-path">, and then select <strong>Share</strong>.</p>
+      </li>
+      <li>
+        <p>In the <strong>Share</strong> panel, on the <strong>Share</strong> tab, select the name of the user from the
+          <strong>Share with</strong> list. You can select multiple users.</p>
+        <p><img src="media/share-project.png" alt="Share a project." title="Share a project"
+            data-linktype="relative-path"></p>
+        <p>(Optional: Include a message to send the co-owners.)</p>
+      </li>
+      <li>
+        <p>Select <strong>Share</strong>.</p>
+        <p>The co-owners are displayed on the <strong>Access</strong> tab.</p>
+        <p><img src="media/project-owners.png" alt="Owners of a project." title="Owners of a project"
+            data-linktype="relative-path"></p>
+      </li>
+    </ol>
+    <p><strong>To remove a co-owner from a project</strong></p>
+    <ol>
+      <li>
+        <p>Sign in to <a href="https://customervoice.microsoft.com/" data-linktype="external">Dynamics 365 Customer
+            Voice</a>.</p>
+      </li>
+      <li>
+        <p>On the <strong>All projects</strong> tab, hover over the project from which you want to remove a co-owner,
+          select <img src="media/project-options.png" alt="Project options." title="Project options"
+            data-linktype="relative-path">, and then select <strong>Share</strong>.</p>
+      </li>
+      <li>
+        <p>In the <strong>Share</strong> panel, go to the <strong>Access</strong> tab, and then select <strong>Remove
+            access</strong> for the user you want to remove.</p>
+        <p><img src="media/project-owners.png" alt="Remove project access." title="Remove project access"
+            data-linktype="relative-path"></p>
+      </li>
+    </ol>
+    <div class="heading-wrapper" data-heading-level="h3"><a class="anchor-link docon docon-link"
+        href="#ownership-of-survey-data" aria-label="Section titled: Ownership of survey data"></a>
+      <h3 id="ownership-of-survey-data" class="heading-anchor">Ownership of survey data</h3>
+    </div>
+    <p>When a project is created, the project creator is the owner of the project and survey data (responses and
+      invitations). When a project is shared, the owner of the project and survey data (responses and invitations) is
+      the Microsoft Dataverse team (of type <a href="/en-us/power-platform/admin/manage-teams#about-group-teams"
+        data-linktype="absolute-path">Azure Active Directory group</a>). The Dataverse team will be assigned the Project
+      Owner security role and will be an owner team. More information: <a
+        href="/en-us/dynamics365/customerengagement/on-premises/developer/use-access-teams-owner-teams-collaborate-share-information"
+        data-linktype="absolute-path">Use access teams and owner teams to collaborate and share information</a></p>
+    <p>Only those responses and invitations that are received and created after the project was shared will be owned by
+      the Dataverse team.</p>
+    <p>The following table shows the ownership of data in Dynamics 365 Customer Voice entities:</p>
+    <div class="has-inner-focus">
+      <table aria-label="Table 1" class="table table-sm">
+        <thead>
+          <tr>
+            <th>Entity</th>
+            <th>User owned projects</th>
+            <th>Shared projects</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Customer Voice project</td>
+            <td>Project creator</td>
+            <td>Team (Dataverse)</td>
+          </tr>
+          <tr>
+            <td>Customer Voice satisfaction metric</td>
+            <td>Project creator</td>
+            <td>Team (Dataverse)</td>
+          </tr>
+          <tr>
+            <td>Customer Voice localized survey email template</td>
+            <td>Project creator</td>
+            <td>Team (Dataverse)</td>
+          </tr>
+          <tr>
+            <td>Customer Voice survey</td>
+            <td>Project creator</td>
+            <td>Team (Dataverse)</td>
+          </tr>
+          <tr>
+            <td>Customer Voice survey email template</td>
+            <td>Project creator</td>
+            <td>Team (Dataverse)</td>
+          </tr>
+          <tr>
+            <td>Customer Voice survey question</td>
+            <td>Project creator</td>
+            <td>Team (Dataverse)</td>
+          </tr>
+          <tr>
+            <td>Customer Voice survey question response</td>
+            <td>Project creator</td>
+            <td>Team (Dataverse)</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="heading-wrapper" data-heading-level="h2"><a class="anchor-link docon docon-link"
+        href="#update-a-project" aria-label="Section titled: Update a project"></a>
+      <h2 id="update-a-project" class="heading-anchor">Update a project</h2>
+    </div>
+    <p>You can update your project with the copy of the same project. The copy can reside in the same environment or a
+      different one. By updating a copy of the project, you can make incremental changes while its survey is being sent
+      to respondents and receiving responses, without interrupting the survey.</p>
+    <div class="alert is-info">
+      <p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span> Note</p>
+      <p>A project can be updated only from a copy of itself, and not from any other project.</p>
+    </div>
+    <p>The following components can be updated:</p>
+    <ul>
+      <li>Project
+        <ul>
+          <li>Name</li>
+          <li>Satisfaction metrics</li>
+        </ul>
+      </li>
+      <li>Survey
+        <ul>
+          <li>Title</li>
+          <li>Description</li>
+          <li>Name</li>
+          <li>Questions and their corresponding answer options</li>
+          <li>Survey customizations</li>
+          <li>Survey distribution settings</li>
+          <li>Email templates and their corresponding languages</li>
+        </ul>
+      </li>
+    </ul>
+    <p>Let's understand the update operation with the following example.</p>
+    <p>You work in a company named Contoso, and create and finalize surveys across the following environments:</p>
+    <ul>
+      <li>
+        <p><strong>Development</strong>: The environment where you create and test surveys.</p>
+      </li>
+      <li>
+        <p><strong>Production</strong>: The environment for live surveys, where you move finalized surveys and then
+          share them with respondents.</p>
+      </li>
+    </ul>
+    <p>You've moved a customer satisfaction survey to the production environment, and want to make the following changes
+      to it:</p>
+    <ul>
+      <li>Add a question</li>
+      <li>Change the color theme</li>
+      <li>Add a background image</li>
+    </ul>
+    <p>As a company policy, you can't edit surveys directly in the production environment. Therefore, you create a copy
+      of the survey in the development environment and make the required changes. You now update the survey in the
+      production environment by using the copy that you created and updated in the development environment.</p>
+    <div class="alert is-info">
+      <p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span> Note</p>
+      <p>If a survey is available only in the target environment, but not in the source environment, the survey in the
+        target environment will be deleted when you perform the update action on the target project. For example, if the
+        source project has two surveys (S1 and S2) and the target project has three surveys (S1, S2, and S3), S3 will be
+        deleted when you update the target project with the source project.</p>
+    </div>
+    <p><strong>To update the project</strong></p>
+    <ol>
+      <li>
+        <p>Sign in to <a href="https://customervoice.microsoft.com/" data-linktype="external">Dynamics 365 Customer
+            Voice</a>.</p>
+      </li>
+      <li>
+        <p>On the <strong>All projects</strong> tab, hover over the project you want to update, select <img
+            src="media/project-options.png" alt="Project options." title="Project options"
+            data-linktype="relative-path">, and then select <strong>Update</strong>.</p>
+        <p><img src="media/project-update-menu.png" alt="Select Update from the shortcut menu."
+            title="Select Update from the shortcut menu" data-linktype="relative-path"></p>
+      </li>
+      <li>
+        <p>On the <strong>Update project</strong> screen, select the project from which your project needs to be
+          updated.</p>
+        <p><img src="media/project-update-screen.png" alt="Select a project to update from."
+            title="Select a project to update from" data-linktype="relative-path"></p>
+      </li>
+      <li>
+        <p>In the confirmation dialog box, select <strong>Confirm</strong>.</p>
+      </li>
+    </ol>
+    <p>A notification is displayed in the upper-right corner when the project is updated.</p>
+    <div class="heading-wrapper" data-heading-level="h2"><a class="anchor-link docon docon-link"
+        href="#delete-a-project" aria-label="Section titled: Delete a project"></a>
+      <h2 id="delete-a-project" class="heading-anchor">Delete a project</h2>
+    </div>
+    <p>You can delete a project that you don't need anymore. Deleting a project removes its surveys, satisfaction
+      metrics, email templates, survey response data, and satisfaction metrics data. The Power Automate flows associated
+      with the surveys are deactivated. The deletion of a project is permanent and can't be reverted.</p>
+    <p><strong>To delete a project</strong></p>
+    <ol>
+      <li>
+        <p>Sign in to <a href="https://customervoice.microsoft.com/" data-linktype="external">Dynamics 365 Customer
+            Voice</a>.</p>
+      </li>
+      <li>
+        <p>On the <strong>All projects</strong> tab, hover over the project you want to delete, select <img
+            src="media/project-options.png" alt="Project options." title="Project options"
+            data-linktype="relative-path">, and then select <strong>Delete</strong>.</p>
+      </li>
+      <li>
+        <p>In the confirmation dialog box, select <strong>Delete</strong>.</p>
+      </li>
+    </ol>
+    <div class="heading-wrapper" data-heading-level="h3"><a class="anchor-link docon docon-link" href="#see-also"
+        aria-label="Section titled: See also"></a>
+      <h3 id="see-also" class="heading-anchor">See also</h3>
+    </div>
+    <p><a href="create-project" data-linktype="relative-path">Create a project</a><br>
+      <a href="create-survey" data-linktype="relative-path">Create a survey</a><br>
+      <a href="manage-surveys" data-linktype="relative-path">Manage surveys</a>
+    </p>
+
+  </div>
+</body>
+
+</html>

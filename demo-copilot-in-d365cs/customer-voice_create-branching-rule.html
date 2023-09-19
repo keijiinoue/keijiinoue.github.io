@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+  Original is here: <a
+    href="https://learn.microsoft.com/en-us/dynamics365/customer-voice/create-branching-rule">https://learn.microsoft.com/en-us/dynamics365/customer-voice/create-branching-rule</a>
+  <div class="content ">
+
+
+    <h1 id="create-a-branching-rule">Create a branching rule</h1>
+
+
+    <div class="display-flex justify-content-space-between align-items-center flex-wrap-wrap page-metadata-container">
+      <div class="margin-right-xxs">
+        <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
+          <li>
+            Article </li>
+
+          <li class="visibility-hidden-visual-diff">
+            <time class="" data-article-date="" aria-label="Article review date" datetime="2022-08-16T08:00:00.000Z"
+              data-article-date-source="calculated">08/16/2022</time>
+          </li>
+          <li class="contributors-holder display-none-print">
+            <button aria-label="View all contributors" class="contributors-button link-button"
+              data-bi-name="contributors" title="View all contributors">
+              2 contributors
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <div id="user-feedback" class="margin-block-xxs display-none-print" data-hide-on-archived="">
+        <button id="user-feedback-button" data-test-id="conceptual-feedback-button"
+          class="button button-sm button-clear button-primary" type="button" data-bi-name="user-feedback-button"
+          data-user-feedback-button="">
+          <span class="icon" aria-hidden="true">
+            <span class="docon docon-like"></span>
+          </span>
+          <span>Feedback</span>
+        </button>
+      </div>
+    </div>
+
+    <div id="ms--content-well-notifications" data-bi-name="content-well-notification"></div>
+
+    <nav id="center-doc-outline" class="doc-outline is-hidden-desktop display-none-print margin-bottom-sm"
+      data-bi-name="intopic toc" role="navigation" aria-label="In this article" hidden="">
+      <h2 id="ms--in-this-article" class="title is-6 margin-block-xs">In this article</h2>
+    </nav>
+
+    <!-- <content> -->
+    <p>Branching rules allow you to customize the flow of your survey. You can show or hide questions, choose to
+      navigate to another question or survey, or even open a website based on the response to a question. Branching
+      rules make your surveys interactive and ensure that only relevant questions are displayed to respondents.</p>
+    <p>If you have hidden a question from being displayed in a survey by using the <strong>Visible</strong> option, you
+      can use the branching rule to display it based on the required response. For more information about setting the
+      visibility for a question, see <a href="create-survey" data-linktype="relative-path">Create a survey</a>.</p>
+    <p>For example, for the question <strong>How likely is it that you would recommend us to a friend?</strong>, you can
+      create a branching rule to ask the reason if someone responds <strong>Not likely</strong>.</p>
+    <p><strong>To create a branching rule</strong></p>
+    <ol>
+      <li>
+        <p>Open the survey.</p>
+      </li>
+      <li>
+        <p>On the <strong>Design</strong> tab, select <strong>Customization</strong> at the right side of the page, and
+          then select <strong>Branching</strong>.</p>
+        <p><img src="media/branching-menu.png" alt="Branching menu item." title="Branching menu item"
+            data-linktype="relative-path"></p>
+        <p>If you haven't created any rules yet, the following message is displayed. Select <strong>Customize</strong>.
+        </p>
+        <p><img src="media/customize-survey-flow-button.png" alt="Customize survey flow button."
+            title="Customize survey flow button" data-linktype="relative-path"></p>
+        <p>If you've created at least one rule, a list of rules is displayed in a grid. Select <strong>New
+            rule</strong>.</p>
+        <p><img src="media/existing-rules.png" alt="New rule button." title="New rule button"
+            data-linktype="relative-path"></p>
+      </li>
+      <li>
+        <p>In the <strong>Rule name</strong> field, enter a name for the branching rule.</p>
+      </li>
+      <li>
+        <p>In the <strong>Primary rule condition(s)</strong> area, select <strong>Add condition</strong> to add a
+          response condition.</p>
+        <div class="alert is-info">
+          <p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span> Note</p>
+          <p>You can create a maximum of 10 conditions.</p>
+        </div>
+      </li>
+      <li>
+        <p>In the first list, choose whether you want to create a rule on a question or a survey variable.</p>
+        <p><img src="media/select-ques-var.png" alt="Select Question or Survey variable."
+            title="Select Question or Survey variable" data-linktype="relative-path"></p>
+        <ul>
+          <li>
+            <p>If you want to create the rule on a survey variable, select a variable from the <strong>Select survey
+                variable</strong> list.</p>
+            <p><img src="media/branch-condition-variable.png" alt="Branching rules condition variable."
+                title="Branching rules condition variable" data-linktype="relative-path"></p>
+          </li>
+          <li>
+            <p>If you want to create the rule on a question, select a question from the <strong>Select question</strong>
+              list.</p>
+            <p><img src="media/branch-condition-question.png" alt="Branching rules condition question."
+                title="Branching rules condition question" data-linktype="relative-path"></p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>Select values from the <strong>Select operator</strong> and <strong>Select response</strong> lists,
+          respectively.</p>
+        <p>You can add more conditions by using <strong>AND</strong>/<strong>OR</strong> operator by selecting
+          <strong>Add condition</strong>.</p>
+        <p><img src="media/branch-multi-condition.png" alt="Branching rules multiple conditions."
+            title="Branching rules multiple conditions" data-linktype="relative-path"></p>
+      </li>
+      <li>
+        <p>Select <strong>Add "If true"</strong> to add the action that will be triggered when the defined condition
+          meets the criteria.</p>
+      </li>
+      <li>
+        <p>Select <strong>Add action</strong> to add the response action.</p>
+        <div class="alert is-info">
+          <p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span> Note</p>
+          <p>You can create a maximum of 10 actions to be triggered when the defined condition is true.</p>
+        </div>
+      </li>
+      <li>
+        <p>In the <strong>Select action</strong> list, choose one of the following actions:</p>
+        <ul>
+          <li><strong>Show</strong>: Select a question to be displayed based on the response to a question.</li>
+          <li><strong>Hide</strong>: Select a question to be hidden based on the response to a question.</li>
+          <li><strong>Navigate to</strong>: Select the target to which a respondent should be navigated.</li>
+        </ul>
+        <p><img src="media/branch-true-select-action.png" alt="Select an action for true condition."
+            title="Select an action for a true condition" data-linktype="relative-path"></p>
+      </li>
+      <li>
+        <p>In the <strong>Select target</strong> list, choose a target for the selected action:</p>
+        <ul>
+          <li>
+            <p>If you select <strong>Show</strong> or <strong>Hide</strong> as the action, you can select
+              <strong>Question</strong> as the target.</p>
+          </li>
+          <li>
+            <p>If you select <strong>Navigate to</strong> as the action, you can choose one of the following targets:
+            </p>
+            <ul>
+              <li><strong>Question</strong>: Skip to a question based on the response to a question. The questions
+                between the source and target questions are hidden from the respondent.</li>
+              <li><strong>End of survey</strong>: End the survey based on the response to a question.</li>
+              <li><strong>Chained survey</strong>: Open a different survey, created by you, based on the response to a
+                question.</li>
+              <li><strong>URL</strong>: Open a website based on the response to a question. You must add
+                <code>http://</code> to the URL for it to work properly.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>In the <strong>Select value</strong> list, enter or choose a value in accordance with the target.</p>
+        <p><img src="media/branch-true-action.png" alt="Branching rules true action."
+            title="Branching rules true action" data-linktype="relative-path"></p>
+      </li>
+      <li>
+        <p>Select <strong>Add "If false"</strong> to add the action that's triggered when the defined condition doesn't
+          meet the criteria. Then follow steps 8 through 11.</p>
+        <div class="alert is-info">
+          <p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span> Note</p>
+          <p>You can create a maximum of 10 actions to be triggered when the defined condition is false.</p>
+        </div>
+        <p><img src="media/branch-false-action.png" alt="Branching rules false action."
+            title="Branching rules false action" data-linktype="relative-path"></p>
+      </li>
+      <li>
+        <p>Select <strong>Save</strong>.</p>
+      </li>
+    </ol>
+    <p>After creating a branching rule, you can preview the survey and see whether the rule is working as expected.</p>
+    <div class="heading-wrapper" data-heading-level="h2"><a class="anchor-link docon docon-link"
+        href="#manage-branching-rules" aria-label="Section titled: Manage branching rules"></a>
+      <h2 id="manage-branching-rules" class="heading-anchor">Manage branching rules</h2>
+    </div>
+    <p>After you've created a branching rule or a set of branching rules, you can edit, delete, or change the order of
+      their execution. The branching rules are executed in the order they were created in.</p>
+    <ol>
+      <li>
+        <p>Open the survey.</p>
+      </li>
+      <li>
+        <p>Select <strong>Customization</strong> at the right side of the page, and then select
+          <strong>Branching</strong>.</p>
+        <p><img src="media/branching-menu.png" alt="Branching menu item." title="Branching menu item"
+            data-linktype="relative-path"></p>
+      </li>
+      <li>
+        <p>A list of rules is displayed in a grid.</p>
+        <p><img src="media/existing-rules.png" alt="Existing branching rules." title="Existing branching rules"
+            data-linktype="relative-path"></p>
+      </li>
+      <li>
+        <p>To edit a branching rule, select <strong>Edit</strong> <img src="media/edit-rule.png"
+            alt="Edit branching rule." title="Edit branching rule" data-linktype="relative-path"> from the corresponding
+          rule row.</p>
+      </li>
+      <li>
+        <p>To delete a branching rule, select <strong>Delete</strong> <img src="media/delete-rule.png"
+            alt="Delete branching rule." title="Delete branching rule" data-linktype="relative-path"> from the
+          corresponding rule row.</p>
+      </li>
+      <li>
+        <p>To change the order of execution of a branching rule, move a rule up or down in the grid. To move a rule up
+          or down, select <strong>Move up</strong> <img src="media/move-up-rule.png" alt="Move up" title="Move up"
+            data-linktype="relative-path"> or <strong>Move down</strong> <img src="media/move-down-rule.png"
+            alt="Move down" title="Move down" data-linktype="relative-path"> from the corresponding rule row.</p>
+      </li>
+    </ol>
+    <div class="heading-wrapper" data-heading-level="h3"><a class="anchor-link docon docon-link" href="#see-also"
+        aria-label="Section titled: See also"></a>
+      <h3 id="see-also" class="heading-anchor">See also</h3>
+    </div>
+    <p><a href="satisfaction-metrics" data-linktype="relative-path">Add and configure satisfaction metrics</a><br>
+      <a href="personalize-survey" data-linktype="relative-path">Personalize your survey by adding variables</a><br>
+      <a href="create-multilingual-survey" data-linktype="relative-path">Create multilingual survey</a><br>
+      <a href="survey-branding" data-linktype="relative-path">Add branding to your survey</a><br>
+      <a href="survey-formatting" data-linktype="relative-path">Add formatting to your survey</a><br>
+      <a href="survey-text-format" data-linktype="relative-path">Add formatting to survey elements</a>
+    </p>
+
+  </div>
+</body>
+
+</html>

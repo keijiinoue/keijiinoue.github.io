@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+  Original is here: <a
+    href="https://learn.microsoft.com/en-us/dynamics365/customer-voice/create-multilingual-survey">https://learn.microsoft.com/en-us/dynamics365/customer-voice/create-multilingual-survey</a>
+  <div class="content ">
+
+
+    <h1 id="create-a-multilingual-survey">Create a multilingual survey</h1>
+
+
+    <div class="display-flex justify-content-space-between align-items-center flex-wrap-wrap page-metadata-container">
+      <div class="margin-right-xxs">
+        <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
+          <li>
+            Article </li>
+
+          <li class="visibility-hidden-visual-diff">
+            <time class="" data-article-date="" aria-label="Article review date" datetime="2022-02-15T00:00:00.000Z"
+              data-article-date-source="calculated">02/15/2022</time>
+          </li>
+          <li class="contributors-holder display-none-print">
+            <button aria-label="View all contributors" class="contributors-button link-button"
+              data-bi-name="contributors" title="View all contributors">
+              2 contributors
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <div id="user-feedback" class="margin-block-xxs display-none-print" data-hide-on-archived="">
+        <button id="user-feedback-button" data-test-id="conceptual-feedback-button"
+          class="button button-sm button-clear button-primary" type="button" data-bi-name="user-feedback-button"
+          data-user-feedback-button="">
+          <span class="icon" aria-hidden="true">
+            <span class="docon docon-like"></span>
+          </span>
+          <span>Feedback</span>
+        </button>
+      </div>
+    </div>
+
+    <div id="ms--content-well-notifications" data-bi-name="content-well-notification"></div>
+
+    <nav id="center-doc-outline" class="doc-outline display-none-print margin-bottom-sm" data-bi-name="intopic toc"
+      role="navigation" aria-label="In this article"><!---->
+      <h2 id="ms--in-this-article" class="title is-6 margin-block-xs"><!---->In this article<!----></h2>
+      <ol id="content-well-in-this-article-list" class="border-left padding-left-xxs" aria-live="polite"
+        aria-relevant="additions">
+        <!---->
+        <li class="">
+          <a href="#language-types-available-in-dynamics-365-customer-voice"><!---->Language types available in Dynamics
+            365 Customer Voice<!----></a>
+        </li>
+        <!---->
+        <li class="">
+          <a href="#add-additional-languages"><!---->Add additional languages<!----></a>
+        </li>
+        <!---->
+        <li class="">
+          <a href="#restrict-respondents-from-changing-the-survey-language"><!---->Restrict respondents from changing
+            the survey language<!----></a>
+        </li>
+        <!---->
+        <li class="">
+          <a href="#change-the-default-language"><!---->Change the default language<!----></a>
+        </li>
+        <!---->
+        <li class="expandable">
+          <a href="#manage-translations"><!---->Manage translations<!----></a>
+        </li>
+        <!---->
+        <li class="expandable">
+          <a href="#language-codes-to-use-in-the-survey-variable"><!---->Language codes to use in the survey
+            variable<!----></a>
+        </li>
+        <!---->
+        <li class="expandable">
+          <a href="#frequently-asked-questions"><!---->Frequently asked questions<!----></a>
+        </li>
+        <!---->
+      </ol>
+
+      <button type="button" aria-expanded="false" data-show-more=""
+        class="link-button font-weight-semibold font-size-sm margin-top-xxs margin-left-xs"
+        aria-controls="content-well-in-this-article-list" data-title="Show 3 more" data-bi-name="show-more-btn">
+        <span class="show-more-text "><!---->Show 3 more<!----></span>
+
+      </button>
+      <!---->
+    </nav>
+
+    <!-- <content> -->
+    <p>A survey created in Dynamics 365 Customer Voice can be translated to multiple languages. After you set up the
+      translations for the survey, respondents can take the survey in the language of their choice. This helps you
+      increase your customer base by presenting the survey in a respondent's preferred language. A survey having
+      translations in multiple languages is known as a <em>multilingual survey</em>.</p>
+    <p>To create a multilingual survey, you must first add the languages and then add translations for each language you
+      added.</p>
+    <p>When you create a multilingual survey, you can let respondents choose their preferred language from the language
+      selector in the upper-right corner of the survey. Alternatively, you can restrict them from changing the language
+      of the survey. More information: <a href="#restrict-respondents-to-change-survey-language"
+        data-linktype="self-bookmark">Restrict respondents from changing the survey language</a></p>
+    <p><img src="media/select-survey-lang.png" alt="Select a language for the survey."
+        title="Select a language for the survey" data-linktype="relative-path"></p>
+    <p>To create a multilingual survey, you must first add a language (additional or custom) and then add translations
+      for the corresponding strings in the survey.</p>
+    <div class="alert is-info">
+      <p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span> Note</p>
+      <p>Dynamics 365 Customer Voice supports 44 languages out of the box. You can also add custom languages if you
+        need.</p>
+    </div>
+    <div class="heading-wrapper" data-heading-level="h2"><a class="anchor-link docon docon-link"
+        href="#language-types-available-in-dynamics-365-customer-voice"
+        aria-label="Section titled: Language types available in Dynamics 365 Customer Voice"></a>
+      <h2 id="language-types-available-in-dynamics-365-customer-voice" class="heading-anchor">Language types available
+        in Dynamics 365 Customer Voice</h2>
+    </div>
+    <div class="heading-wrapper" data-heading-level="h3"><a class="anchor-link docon docon-link" href="#root-language"
+        aria-label="Section titled: Root language"></a>
+      <h3 id="root-language" class="heading-anchor">Root language</h3>
+    </div>
+    <p>The <em>root language</em> is the language in which the survey was originally created. For example, if you're
+      using Dynamics 365 Customer Voice in French and you're creating all your surveys in French, that's your root
+      language—in short, the language you see in the designer. The root language is automatically set as the default
+      language for the respondent, but you can change this by selecting a different default language from the list of
+      languages supported in Dynamics 365. For more information, go to <a href="#change-the-default-language"
+        data-linktype="self-bookmark">Change the default language</a> later in this topic.</p>
+    <div class="alert is-info">
+      <p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span> Note</p>
+      <p>The root language for a survey can't be changed. For example, let's assume you've used Dynamics 365 Customer
+        Voice in German and created your survey in German. Then you decide to use Dynamics 365 Customer Voice in
+        English. While all the other parts of the application will be displayed in English, the original survey text
+        will continue to be displayed in German. You can't remove the root language of the survey unless you explicitly
+        delete the survey.</p>
+    </div>
+    <div class="heading-wrapper" data-heading-level="h3"><a class="anchor-link docon docon-link"
+        href="#additional-languages" aria-label="Section titled: Additional languages"></a>
+      <h3 id="additional-languages" class="heading-anchor">Additional languages</h3>
+    </div>
+    <p>A survey can be rendered in one of the following types of languages in addition to the root language:</p>
+    <ul>
+      <li>
+        <p><strong>Out-of-the-box languages</strong>: You select these languages from the list of languages that are
+          supported in Dynamics 365. You can add, edit, and delete them by using the Dynamics 365 Customer Voice
+          interface. System strings are translated automatically.</p>
+      </li>
+      <li>
+        <p><strong>Custom languages</strong>: These languages aren't included in the list of Dynamics 365 supported
+          languages. You can add, edit, and delete a custom language by using the Dynamics 365 Customer Voice interface.
+          You define the display name and code for a custom language. System strings won't be translated automatically
+          and will be visible in the survey's default language.</p>
+      </li>
+    </ul>
+    <div class="heading-wrapper" data-heading-level="h3"><a class="anchor-link docon docon-link"
+        href="#fallback-language" aria-label="Section titled: Fallback language"></a>
+      <h3 id="fallback-language" class="heading-anchor">Fallback language</h3>
+    </div>
+    <p>The <em>fallback language</em> is a language in which a survey is rendered if translation for the survey is not
+      available. The fallback language transition is handled internally by the system, and the response page is
+      automatically rendered in the available fallback language.</p>
+    <p>For example, the respondent's web browser language is set to Mexican Spanish (es-MX). But, you've added
+      translations in International Spanish. In this case, the survey is automatically loaded in International Spanish
+      (which is the fallback language for Mexican Spanish).</p>
+    <div class="heading-wrapper" data-heading-level="h2"><a class="anchor-link docon docon-link"
+        href="#add-additional-languages" aria-label="Section titled: Add additional languages"></a>
+      <h2 id="add-additional-languages" class="heading-anchor">Add additional languages</h2>
+    </div>
+    <p>After you've completed the setup of your survey in its root language, you can add additional languages to your
+      survey from the <strong>Languages</strong> panel. After adding the languages, you can add translations either in
+      bulk for all languages or to each individual language. System strings are translated automatically for the
+      out-of-the-box languages. For custom languages, system strings aren't translated automatically and will be visible
+      in the survey's default language.</p>
+    <div class="heading-wrapper" data-heading-level="h3"><a class="anchor-link docon docon-link"
+        href="#step-1-add-additional-languages" aria-label="Section titled: Step 1: Add additional languages"></a>
+      <h3 id="step-1-add-additional-languages" class="heading-anchor">Step 1: Add additional languages</h3>
+    </div>
+    <ol>
+      <li>
+        <p>Open the survey.</p>
+      </li>
+      <li>
+        <p>On the&nbsp;<strong>Design</strong>&nbsp;tab, select&nbsp;<strong>Customization</strong>&nbsp;at the right
+          side of the page, and then select&nbsp;<strong>Languages</strong>.</p>
+        <p>The <strong>Languages</strong> panel is displayed with the root language selected and set as the default
+          language for the survey.</p>
+        <p><img src="media/root-lang.png" alt="Root language for the survey." title="Root language for the survey."
+            data-linktype="relative-path"></p>
+      </li>
+      <li>
+        <p>In the <strong>Languages</strong> panel, select <strong>Add language</strong>.</p>
+      </li>
+      <li>
+        <p>From the list of languages, browse to and select the out-of-the-box languages you want. You can also search
+          for a language and then select it.</p>
+        <p><img src="media/lang-list.png" alt="Browse to and select the language you want."
+            title="Browse to and select the language you want" data-linktype="relative-path"></p>
+        <div class="alert is-info">
+          <p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span> Note</p>
+          <p>You can select multiple languages by selecting the checkboxes next to each language.</p>
+        </div>
+      </li>
+      <li>
+        <p>To add a custom language, in the <strong>Languages</strong> panel, select <strong>Add language</strong>, and
+          then select <strong>Add another language</strong>.</p>
+        <p><img src="media/add-custom-lang.png" alt="Add a custom language in a survey."
+            title="Add a custom language in a survey" data-linktype="relative-path"></p>
+      </li>
+      <li>
+        <p>In the <strong>Enter language name</strong> field, enter the name of the custom language you want to add.</p>
+      </li>
+      <li>
+        <p>In the <strong>Enter code</strong> field, enter the code of the custom language.</p>
+        <p>Let's say you want to add the <strong>Spanish (Mexico)</strong> language to your survey. You searched in the
+          languages list and found only <strong>Spanish (Spain, International Sort)</strong>. In this case, you must
+          manually add <strong>Spanish (Mexico)</strong> to the languages list. You'll define the display name as
+          <strong>Spanish (Mexico)</strong> and the language code as <strong>es-MX</strong>.</p>
+        <p><img src="media/add-custom-lang-1.png" alt="Custom language being added to a survey."
+            title="Custom language being added to a survey" data-linktype="relative-path"></p>
+      </li>
+      <li>
+        <p>Select anywhere in the <strong>Languages</strong> panel to save the changes.</p>
+      </li>
+      <li>
+        <p>Repeat steps 5 through 8 to add more custom languages.</p>
+      </li>
+    </ol>
+    <p>The added languages are displayed in the panel along with their language codes. You can use these codes in the
+      <strong>locale</strong> variable when you send personalized survey invitations.</p>
+    <p><img src="media/lang-added.png" alt="Languages added for the survey." title="Languages added for the survey."
+        data-linktype="relative-path"></p>
+    <div class="alert is-info">
+      <p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span> Note</p>
+      <ul>
+        <li>The language code you enter is validated against the existing list. You can't have two languages defined
+          with the same language code for the survey.</li>
+        <li>You can add up to 86 languages per survey.</li>
+      </ul>
+    </div>
+    <div class="heading-wrapper" data-heading-level="h3"><a class="anchor-link docon docon-link"
+        href="#step-2-add-translations" aria-label="Section titled: Step 2: Add translations"></a>
+      <h3 id="step-2-add-translations" class="heading-anchor">Step 2: Add translations</h3>
+    </div>
+    <p>After adding the out-of-the-box languages and any custom languages, you can choose from two options for adding
+      translations:</p>
+    <ul>
+      <li>Translate individual languages from the Dynamics 365 Customer Voice interface</li>
+      <li>Translate all languages in bulk, by using the Excel file</li>
+    </ul>
+    <div class="heading-wrapper" data-heading-level="h4"><a class="anchor-link docon docon-link"
+        href="#option-1-translate-individual-languages"
+        aria-label="Section titled: Option 1: Translate individual languages"></a>
+      <h4 id="option-1-translate-individual-languages" class="heading-anchor">Option 1: Translate individual languages
+      </h4>
+    </div>
+    <ol>
+      <li>
+        <p>In the&nbsp;<strong>Languages</strong>&nbsp;panel, select the language for which you want to add
+          translations.</p>
+        <p>Alternately, you can also hover over a language, select <strong>More options</strong> (...), and then select
+          <strong>Add translation</strong>.</p>
+      </li>
+      <li>
+        <p>Select the survey element, and then enter the translated text. Repeat this step for all survey elements.</p>
+        <p><img src="media/translation-added.png" alt="Translated text added for a few elements in the survey."
+            title="Translated text added a few elements in the survey" data-linktype="relative-path"></p>
+      </li>
+      <li>
+        <p>After you've added translated text for all elements in the survey, select&nbsp;<strong>Back</strong>&nbsp;in
+          the upper-left corner of the page to go back to the&nbsp;<strong>Languages</strong>&nbsp;panel.</p>
+      </li>
+      <li>
+        <p>Repeat steps 1 through 3 to add translations for other languages.</p>
+      </li>
+    </ol>
+    <div class="heading-wrapper" data-heading-level="h4"><a class="anchor-link docon docon-link"
+        href="#option-2-translate-all-languages-in-bulk"
+        aria-label="Section titled: Option 2: Translate all languages in bulk"></a>
+      <h4 id="option-2-translate-all-languages-in-bulk" class="heading-anchor">Option 2: Translate all languages in bulk
+      </h4>
+    </div>
+    <ol>
+      <li>
+        <p>In the&nbsp;<strong>Languages</strong>&nbsp;panel, expand <strong>Advanced options</strong>, and then
+          select&nbsp;<strong>Download template</strong> to download an Excel file containing strings in the primary
+          language and columns for each of the selected languages. For example,&nbsp;<strong>da</strong> for Danish,
+          <strong>de</strong>&nbsp;for German, <strong>fr-FR</strong>&nbsp;for French (France), and
+          <strong>es-MX</strong> for Spanish (Mexico).</p>
+        <p><img src="media/download-excel.png" alt="Download an Excel file to edit all languages."
+            title="Download an Excel file to edit all languages." data-linktype="relative-path"></p>
+      </li>
+      <li>
+        <p>Open the Excel file and add translations for each language in its respective column.</p>
+      </li>
+      <li>
+        <p>After adding translations for all languages in the Excel file, go to
+          the&nbsp;<strong>Languages</strong>&nbsp;panel, expand <strong>Advanced options</strong>, and then
+          select&nbsp;<strong>Upload</strong>.</p>
+      </li>
+      <li>
+        <p>Browse to and select the Excel file in which you have added translations.</p>
+      </li>
+    </ol>
+    <div class="alert is-info">
+      <p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span> Note</p>
+      <ul>
+        <li>The first column in the Excel file contains strings in the primary language and isn't editable.</li>
+        <li>You must ensure that a translation for each string is provided in the Excel file.</li>
+        <li>We recommend that you download the latest Excel file every time you add or edit translations. This ensures
+          that the latest strings and languages are available.</li>
+        <li>We recommend that you <em>not</em> make a copy of the Excel file and add strings to it, or change the file
+          name extension. These actions might result in upload failure.</li>
+      </ul>
+    </div>
+    <div class="heading-wrapper" data-heading-level="h3"><a class="anchor-link docon docon-link"
+        href="#step-3-verify-translations" aria-label="Section titled: Step 3. Verify translations"></a>
+      <h3 id="step-3-verify-translations" class="heading-anchor">Step 3. Verify translations</h3>
+    </div>
+    <p>After uploading the Excel file or adding your own translations, you can preview the survey to see whether
+      everything works as expected. Select the language from the language selector at the upper-right corner of the
+      survey.</p>
+    <p><img src="media/translated-survey.png" alt="Screenshot showing a translated survey." title="Translated survey"
+        data-linktype="relative-path"></p>
+    <p><a name="restrict-respondents-to-change-survey-language"></a></p>
+    <div class="heading-wrapper" data-heading-level="h2"><a class="anchor-link docon docon-link"
+        href="#restrict-respondents-from-changing-the-survey-language"
+        aria-label="Section titled: Restrict respondents from changing the survey language"></a>
+      <h2 id="restrict-respondents-from-changing-the-survey-language" class="heading-anchor">Restrict respondents from
+        changing the survey language</h2>
+    </div>
+    <p>If you've created a multilingual survey, you can decide whether your respondents can select the language they
+      prefer (which is the default setting) or view the survey in the language selected for them through their browser
+      language setting or locale variable.</p>
+    <p><strong>To restrict respondents from changing their survey language</strong></p>
+    <ol>
+      <li>
+        <p>Open the survey.</p>
+      </li>
+      <li>
+        <p>On the&nbsp;<strong>Design</strong>&nbsp;tab, select&nbsp;<strong>Customization</strong>&nbsp;at the right
+          side of the page, and then select&nbsp;<strong>Languages</strong>.</p>
+      </li>
+      <li>
+        <p>In the&nbsp;<strong>Languages</strong>&nbsp;panel, expand <strong>Advanced options</strong>, and then turn
+          off the&nbsp;<strong>Respondents can change languages</strong> toggle.</p>
+        <p><img src="media/change-lang-respondent.png" alt="Restrict respondents from changing the survey language."
+            title="Restrict respondents to change survey language" data-linktype="relative-path"></p>
+      </li>
+    </ol>
+    <div class="alert is-info">
+      <p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span> Note</p>
+      <p>When this setting is turned off, a respondent can see only one language and can't change the language at all.
+      </p>
+    </div>
+    <div class="heading-wrapper" data-heading-level="h2"><a class="anchor-link docon docon-link"
+        href="#change-the-default-language" aria-label="Section titled: Change the default language"></a>
+      <h2 id="change-the-default-language" class="heading-anchor">Change the default language</h2>
+    </div>
+    <p>The default language is the language in which the survey is loaded if no explicit locale variable is passed or if
+      the respondent is using their web browser in a language for which you haven't added a translation.</p>
+    <p>Let's assume you use the Dynamics 365 Customer Voice application in English. When you create a survey, English is
+      set as the default language for the survey. However, a majority of your survey respondents are from France, so you
+      want to change the default language from English to French.</p>
+    <div class="alert is-info">
+      <p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span> Note</p>
+      <p>The survey will be loaded in the default language only as a last resort—in a case where the respondent is using
+        a browser language that's different from the available languages and no explicit locale variable has been passed
+        through the URL.</p>
+    </div>
+    <p>You can change the default language for your survey from the <strong>Languages</strong> panel. Note that you can
+      change the default language only when multiple languages have been added to the survey.</p>
+    <p><strong>To change the default language for a survey</strong></p>
+    <ol>
+      <li>
+        <p>Open the survey.</p>
+      </li>
+      <li>
+        <p>On the&nbsp;<strong>Design</strong>&nbsp;tab, select&nbsp;<strong>Customization</strong>&nbsp;at the right
+          side of the page, and then select&nbsp;<strong>Languages</strong>.</p>
+      </li>
+      <li>
+        <p>From the list of languages, hover over a language, select <strong>...</strong>, and then select <strong>Set
+            as default</strong>.</p>
+        <p><img src="media/survey-default-lang.png" alt="Change the default language of the survey."
+            title="Change the default language of the survey" data-linktype="relative-path"></p>
+        <p>The default language is marked with <img src="media/default-lang-marker.png" alt="Default language marker."
+            title="Default language marker" data-linktype="relative-path"> in the <strong>Default</strong> column.</p>
+      </li>
+    </ol>
+    <div class="heading-wrapper" data-heading-level="h2"><a class="anchor-link docon docon-link"
+        href="#manage-translations" aria-label="Section titled: Manage translations"></a>
+      <h2 id="manage-translations" class="heading-anchor">Manage translations</h2>
+    </div>
+    <p>After adding translations for the languages you want in your survey, you can edit the existing translation or
+      delete a language.</p>
+    <ol>
+      <li>
+        <p>Open the survey.</p>
+      </li>
+      <li>
+        <p>On the&nbsp;<strong>Design</strong>&nbsp;tab, select&nbsp;<strong>Customization</strong>&nbsp;at the right
+          side of the page, and then select&nbsp;<strong>Languages</strong>.</p>
+      </li>
+      <li>
+        <p>Do one of the following:</p>
+        <ul>
+          <li>
+            <p>To edit translation strings, select the language and edit the translation as required.</p>
+          </li>
+          <li>
+            <p>To delete a language, hover over the language, select <strong>...</strong>, and then select
+              <strong>Delete</strong>.</p>
+            <div class="alert is-primary">
+              <p class="alert-title"><span class="docon docon-status-info-outline" aria-hidden="true"></span> Important
+              </p>
+              <p>After you delete a language, you can't retrieve any of the strings that have already been translated.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </li>
+    </ol>
+    <div class="heading-wrapper" data-heading-level="h2"><a class="anchor-link docon docon-link"
+        href="#language-codes-to-use-in-the-survey-variable"
+        aria-label="Section titled: Language codes to use in the survey variable"></a>
+      <h2 id="language-codes-to-use-in-the-survey-variable" class="heading-anchor">Language codes to use in the survey
+        variable</h2>
+    </div>
+    <p>When you create a multilingual survey, you can use the <strong>locale</strong> survey variable to set the default
+      language for displaying the survey. The following table lists the out-of-the-box languages within Dynamics 365
+      Customer Voice and their associated language codes.</p>
+    <div class="has-inner-focus">
+      <table aria-label="Table 1" class="table table-sm">
+        <thead>
+          <tr>
+            <th>Language display name</th>
+            <th>Language ISO code</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Catalan</td>
+            <td>ca</td>
+          </tr>
+          <tr>
+            <td>Serbian (Cyrillic, Serbia)</td>
+            <td>sr-cyrl-rs</td>
+          </tr>
+          <tr>
+            <td>Danish</td>
+            <td>da</td>
+          </tr>
+          <tr>
+            <td>German</td>
+            <td>de</td>
+          </tr>
+          <tr>
+            <td>Estonian</td>
+            <td>et</td>
+          </tr>
+          <tr>
+            <td>Spanish (Spain, International Sort)</td>
+            <td>es-ES</td>
+          </tr>
+          <tr>
+            <td>Basque</td>
+            <td>eu</td>
+          </tr>
+          <tr>
+            <td>French (France)</td>
+            <td>fr-FR</td>
+          </tr>
+          <tr>
+            <td>Galician</td>
+            <td>gl</td>
+          </tr>
+          <tr>
+            <td>Croatian</td>
+            <td>hr</td>
+          </tr>
+          <tr>
+            <td>Indonesian</td>
+            <td>id</td>
+          </tr>
+          <tr>
+            <td>Italian</td>
+            <td>it</td>
+          </tr>
+          <tr>
+            <td>Latvian</td>
+            <td>lv</td>
+          </tr>
+          <tr>
+            <td>Lithuanian</td>
+            <td>lt</td>
+          </tr>
+          <tr>
+            <td>Hungarian</td>
+            <td>hu</td>
+          </tr>
+          <tr>
+            <td>Malay</td>
+            <td>ms</td>
+          </tr>
+          <tr>
+            <td>Dutch</td>
+            <td>nl</td>
+          </tr>
+          <tr>
+            <td>Norwegian Nynorsk (Norway)</td>
+            <td>nb-no</td>
+          </tr>
+          <tr>
+            <td>Polish</td>
+            <td>pl</td>
+          </tr>
+          <tr>
+            <td>Portuguese (Brazil)</td>
+            <td>pt-br</td>
+          </tr>
+          <tr>
+            <td>Portuguese (Portugal)</td>
+            <td>pt-pt</td>
+          </tr>
+          <tr>
+            <td>Russian</td>
+            <td>ru</td>
+          </tr>
+          <tr>
+            <td>Romanian</td>
+            <td>ro</td>
+          </tr>
+          <tr>
+            <td>Slovak</td>
+            <td>sk</td>
+          </tr>
+          <tr>
+            <td>Slovenian</td>
+            <td>sl</td>
+          </tr>
+          <tr>
+            <td>Serbian (Latin, Serbia)</td>
+            <td>sr-latn-rs</td>
+          </tr>
+          <tr>
+            <td>Finnish</td>
+            <td>fi</td>
+          </tr>
+          <tr>
+            <td>Swedish</td>
+            <td>sv</td>
+          </tr>
+          <tr>
+            <td>Vietnamese</td>
+            <td>vi</td>
+          </tr>
+          <tr>
+            <td>Turkish</td>
+            <td>tr</td>
+          </tr>
+          <tr>
+            <td>Ukrainian</td>
+            <td>uk</td>
+          </tr>
+          <tr>
+            <td>Czech</td>
+            <td>cs</td>
+          </tr>
+          <tr>
+            <td>Greek</td>
+            <td>el</td>
+          </tr>
+          <tr>
+            <td>Bulgarian</td>
+            <td>bg</td>
+          </tr>
+          <tr>
+            <td>Kazakh</td>
+            <td>kk</td>
+          </tr>
+          <tr>
+            <td>Hebrew</td>
+            <td>he</td>
+          </tr>
+          <tr>
+            <td>Arabic</td>
+            <td>ar</td>
+          </tr>
+          <tr>
+            <td>Hindi</td>
+            <td>hi</td>
+          </tr>
+          <tr>
+            <td>Thai</td>
+            <td>th</td>
+          </tr>
+          <tr>
+            <td>Chinese (Simplified)</td>
+            <td>zh-Hans</td>
+          </tr>
+          <tr>
+            <td>Chinese (Traditional)</td>
+            <td>zh-Hant</td>
+          </tr>
+          <tr>
+            <td>Japanese</td>
+            <td>ja</td>
+          </tr>
+          <tr>
+            <td>Korean</td>
+            <td>ko</td>
+          </tr>
+          <tr>
+            <td>English (United States)</td>
+            <td>en-us</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="heading-wrapper" data-heading-level="h2"><a class="anchor-link docon docon-link"
+        href="#frequently-asked-questions" aria-label="Section titled: Frequently asked questions"></a>
+      <h2 id="frequently-asked-questions" class="heading-anchor">Frequently asked questions</h2>
+    </div>
+    <div class="heading-wrapper" data-heading-level="h4"><a class="anchor-link docon docon-link"
+        href="#how-many-languages-can-be-added-to-a-survey"
+        aria-label="Section titled: How many languages can be added to a survey?"></a>
+      <h4 id="how-many-languages-can-be-added-to-a-survey" class="heading-anchor">How many languages can be added to a
+        survey?</h4>
+    </div>
+    <p>You can add up to 86 languages per survey. These can be a combination of out-of-the-box and custom languages.</p>
+    <div class="heading-wrapper" data-heading-level="h4"><a class="anchor-link docon docon-link"
+        href="#how-does-dynamics-365-customer-voice-decide-which-language-to-show-to-a-particular-respondent"
+        aria-label="Section titled: How does Dynamics 365 Customer Voice decide which language to show to a particular respondent?"></a>
+      <h4 id="how-does-dynamics-365-customer-voice-decide-which-language-to-show-to-a-particular-respondent"
+        class="heading-anchor">How does Dynamics 365 Customer Voice decide which language to show to a particular
+        respondent?</h4>
+    </div>
+    <p>If you're sending a personalized survey invitation through email or Power Automate, you can define the language
+      code by using the out-of-the-box <strong>locale</strong> variable for each invitation.</p>
+    <p>Let's say the language code in the contact record for your customer, Milton, is set to <strong>ar</strong> in
+      your back-end CRM system. You can pass that as a parameter in your personalized invitation. This will ensure that
+      the survey is loaded by default in Arabic for Milton.</p>
+    <p>You can also pass the locale parameters for each contact by using a CSV file . More information: <a
+        href="send-survey-email#import-contacts-from-a-csv-file" data-linktype="relative-path">Import contacts from a
+        CSV file</a></p>
+    <p>Let's say that you aren't sending survey invitations through a personalized invitation link, and you know that
+      all the respondents to your anonymous survey must see the survey in Arabic. In this case, you can add an explicit
+      <strong>lang=ar</strong> parameter to the anonymous URL of the survey. This ensures that the survey will be loaded
+      in the Arabic language for all respondents.</p>
+    <p>If you don't pass the value of the <strong>lang</strong> parameter in the URL, the survey will be loaded in the
+      browser language of the respondent.</p>
+    <p>So, the order of priority is:</p>
+    <ol>
+      <li>The <strong>locale</strong> variable or the <strong>lang</strong> parameter. The <strong>locale</strong>
+        variable is defined for personalized invitations sent through Power Automate or email. The <strong>lang</strong>
+        parameter is defined in the URL.</li>
+      <li>The browser language the respondent is using</li>
+      <li>The fallback language of the survey (in case the browser language is not set up in the survey)</li>
+      <li>Default language of the survey.</li>
+    </ol>
+    <div class="heading-wrapper" data-heading-level="h4"><a class="anchor-link docon docon-link"
+        href="#which-should-i-use-for-setting-up-translation-stringsuploading-files-through-excel-or-directly-updating-from-the-applications-interface"
+        aria-label="Section titled: Which should I use for setting up translation strings—uploading files through Excel or directly updating from the application's interface?"></a>
+      <h4
+        id="which-should-i-use-for-setting-up-translation-stringsuploading-files-through-excel-or-directly-updating-from-the-applications-interface"
+        class="heading-anchor">Which should I use for setting up translation strings—uploading files through Excel or
+        directly updating from the application's interface?</h4>
+    </div>
+    <p>If you've added a large number of languages to your survey and you need to get the translation strings verified
+      by a translation team, you can upload the translations in the Excel file.</p>
+    <p>If your survey has only a few languages and the translated strings are readily available, you can use the
+      application's interface to set up the translated strings.</p>
+    <div class="heading-wrapper" data-heading-level="h4"><a class="anchor-link docon docon-link"
+        href="#when-should-i-set-up-the-translation"
+        aria-label="Section titled: When should I set up the translation?"></a>
+      <h4 id="when-should-i-set-up-the-translation" class="heading-anchor">When should I set up the translation?</h4>
+    </div>
+    <p>We recommend that you start setting up translation strings only after you've completely set up the survey in its
+      root language. This will make updating the translation strings more manageable and easier to maintain.</p>
+    <div class="heading-wrapper" data-heading-level="h4"><a class="anchor-link docon docon-link"
+        href="#what-happens-to-email-templates" aria-label="Section titled: What happens to email templates?"></a>
+      <h4 id="what-happens-to-email-templates" class="heading-anchor">What happens to email templates?</h4>
+    </div>
+    <p>You'll need to set up localized templates for every language you want to add to the survey. After you add the
+      languages you want to the survey, you can choose them from the <strong>Language</strong> list. You can then create
+      separate email templates for all the languages you added. More information: <a
+        href="send-survey-email#create-multilingual-email-templates" data-linktype="relative-path">Create multilingual
+        email templates</a></p>
+    <p>Let's say you've added seven additional languages to the survey. You'll have to create seven email templates, one
+      for each language. You'll have to pass the value of the language code as a <strong>locale</strong> variable either
+      in email or Power Automate, so that the customer gets the survey in the intended language.</p>
+    <div class="heading-wrapper" data-heading-level="h3"><a class="anchor-link docon docon-link" href="#see-also"
+        aria-label="Section titled: See also"></a>
+      <h3 id="see-also" class="heading-anchor">See also</h3>
+    </div>
+    <p><a href="satisfaction-metrics" data-linktype="relative-path">Add and configure satisfaction metrics</a><br>
+      <a href="create-branching-rule" data-linktype="relative-path">Add logic by creating branching rules</a><br>
+      <a href="personalize-survey" data-linktype="relative-path">Personalize your survey by adding variables</a><br>
+      <a href="survey-branding" data-linktype="relative-path">Add branding to your survey</a><br>
+      <a href="survey-formatting" data-linktype="relative-path">Add formatting to your survey</a><br>
+      <a href="survey-text-format" data-linktype="relative-path">Add formatting to survey elements</a>
+    </p>
+
+  </div>
+</body>
+
+</html>

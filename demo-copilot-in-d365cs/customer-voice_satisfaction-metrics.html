@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+  Original is here: <a
+    href="https://learn.microsoft.com/en-us/dynamics365/customer-voice/satisfaction-metrics">https://learn.microsoft.com/en-us/dynamics365/customer-voice/satisfaction-metrics</a>
+  <div class="content ">
+
+
+    <h1 id="add-and-configure-satisfaction-metrics">Add and configure satisfaction metrics</h1>
+
+
+    <div class="display-flex justify-content-space-between align-items-center flex-wrap-wrap page-metadata-container">
+      <div class="margin-right-xxs">
+        <ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
+          <li>
+            Article </li>
+
+          <li class="visibility-hidden-visual-diff">
+            <time class="" data-article-date="" aria-label="Article review date" datetime="2022-03-08T00:00:00.000Z"
+              data-article-date-source="calculated">03/08/2022</time>
+          </li>
+          <li class="contributors-holder display-none-print">
+            <button aria-label="View all contributors" class="contributors-button link-button"
+              data-bi-name="contributors" title="View all contributors">
+              3 contributors
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <div id="user-feedback" class="margin-block-xxs display-none-print" data-hide-on-archived="">
+        <button id="user-feedback-button" data-test-id="conceptual-feedback-button"
+          class="button button-sm button-clear button-primary" type="button" data-bi-name="user-feedback-button"
+          data-user-feedback-button="">
+          <span class="icon" aria-hidden="true">
+            <span class="docon docon-like"></span>
+          </span>
+          <span>Feedback</span>
+        </button>
+      </div>
+    </div>
+
+    <div id="ms--content-well-notifications" data-bi-name="content-well-notification"></div>
+
+    <nav id="center-doc-outline" class="doc-outline display-none-print margin-bottom-sm" data-bi-name="intopic toc"
+      role="navigation" aria-label="In this article"><!---->
+      <h2 id="ms--in-this-article" class="title is-6 margin-block-xs"><!---->In this article<!----></h2>
+      <ol id="content-well-in-this-article-list" class="border-left padding-left-xxs" aria-live="polite"
+        aria-relevant="additions">
+        <!---->
+        <li class="">
+          <a href="#add-satisfaction-metrics"><!---->Add satisfaction metrics<!----></a>
+        </li>
+        <!---->
+        <li class="">
+          <a href="#edit-satisfaction-metrics"><!---->Edit satisfaction metrics<!----></a>
+        </li>
+        <!---->
+      </ol>
+      <!---->
+    </nav>
+
+    <!-- <content> -->
+    <p>Organizations use various metrics to determine the effectiveness of the experiences they provide to their
+      customers. They track a subset of these metrics daily, and this forms the basis for measuring their performance.
+      These metrics, called <em>satisfaction metrics</em>, are measurement systems you can use to measure your customer
+      experience. This ensures that the data you collect through surveys can be analyzed successfully, and you can make
+      decisions accordingly.</p>
+    <p>Dynamics 365 Customer Voice includes support for adding the following standardized satisfaction metrics and
+      mapping them to survey questions:</p>
+    <ul>
+      <li>
+        <p><strong>Net Promoter Score (NPS)</strong>: NPS is a metric used to measure customer loyalty. The score is
+          calculated from the NPS-type question by using a scale from 0 through 10. The respondents are grouped as
+          follows:</p>
+        <ul>
+          <li><strong>Detractors</strong> are those who respond with a score from 0 through 6.</li>
+          <li><strong>Passives</strong> are those who respond with a score of 7 or 8.</li>
+          <li><strong>Promoters</strong> are those who respond with a score of 9 or 10.</li>
+        </ul>
+        <p>NPS is calculated by subtracting the percentage of detractors from the percentage of promoters. The score is
+          a number that can range from –100 to 100.</p>
+      </li>
+      <li>
+        <p><strong>Sentiment</strong>: Sentiment is a metric used to identify customer sentiment toward a product or a
+          service. Sentiment groups the responses to a text-based question as positive, negative, or neutral.</p>
+        <div class="alert is-info">
+          <p class="alert-title"><span class="docon docon-status-error-outline" aria-hidden="true"></span> Note</p>
+          <ul>
+            <li>Only a limited number of languages are supported for sentiment analysis. To know about the supported
+              languages, see <a href="cv-faq#what-languages-are-supported-for-sentiment-analysis"
+                data-linktype="relative-path">What languages are supported for sentiment analysis?</a>.</li>
+            <li>To learn about responsible AI use, see <a
+                href="/en-us/legal/cognitive-services/language-service/transparency-note-sentiment-analysis"
+                data-linktype="absolute-path">Transparency note for Sentiment Analysis</a>.</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <p><strong>Customer Satisfaction (CSAT)</strong>: CSAT is a metric used to measure the level of satisfaction
+          customers have with a product or a service. CSAT is measured by responses to rating-type questions. The CSAT
+          score is calculated on a scale of 1 to 5. If you create a question on a scale other than 1 to 5, the CSAT
+          score is normalized as per the 1 to 5 scale. This helps in comparing various CSAT scores.</p>
+      </li>
+      <li>
+        <p><strong>Custom score</strong>: Custom score is a metric used to measure your respondent's overall
+          satisfaction level by using survey scores. The value of this metric is generated by combining responses from
+          multiple questions. More information: <a href="survey-scoring" data-linktype="relative-path">Survey
+            scoring</a></p>
+      </li>
+    </ul>
+    <p>Satisfaction metrics are defined at the project level. If you create a project from one of the ready-to-use
+      project templates in Dynamics 365 Customer Voice, satisfaction metrics are already created and mapped to survey
+      questions. However, you can add more metrics as needed. If you create a project from the <strong>Blank</strong>
+      project template, you need to add satisfaction metrics and map them to the questions.</p>
+    <div class="alert is-primary">
+      <p class="alert-title"><span class="docon docon-status-info-outline" aria-hidden="true"></span> Important</p>
+      <p>Projects, email templates, and satisfaction metrics are primarily based out of Microsoft DataVerse. Refreshing
+        data on Dataverse environment with another will break Customer Voice projects and surveys on the refreshed
+        environment.</p>
+    </div>
+    <p>After you've received responses to your survey, a dashboard is created automatically for each set of metrics,
+      showcasing recent scores and trends. The dashboard is available under <strong>Reports</strong> in the left pane.
+      More information: <a href="satisfaction-metrics-report" data-linktype="relative-path">View a satisfaction metrics
+        report</a></p>
+    <div class="heading-wrapper" data-heading-level="h2"><a class="anchor-link docon docon-link"
+        href="#add-satisfaction-metrics" aria-label="Section titled: Add satisfaction metrics"></a>
+      <h2 id="add-satisfaction-metrics" class="heading-anchor">Add satisfaction metrics</h2>
+    </div>
+    <ol>
+      <li>
+        <p>Open the survey.</p>
+      </li>
+      <li>
+        <p>On the <strong>Design</strong> tab, select <strong>Customization</strong> at the right side of the page, and
+          then select <strong>Satisfaction metrics</strong>.</p>
+        <p><img src="media/satisfaction-metrics-button.png" alt="Satisfaction metrics menu item."
+            title="Satisfaction metrics menu item" data-linktype="relative-path"></p>
+      </li>
+      <li>
+        <p>In the <strong>Satisfaction metrics</strong> panel, select <strong>Add metrics</strong>, and then select the
+          type of metric you want to add.</p>
+        <p><img src="media/add-metrics.png" alt="Add satisfaction metrics." title="Add satisfaction metrics"
+            data-linktype="relative-path"></p>
+      </li>
+      <li>
+        <p>Enter the following information:</p>
+        <ul>
+          <li>
+            <p><strong>Name</strong>: Name of the satisfaction metric.</p>
+          </li>
+          <li>
+            <p><strong>Add description</strong>: Expand the section, and add an optional description for the
+              satisfaction metric.</p>
+          </li>
+          <li>
+            <p><strong>&lt;survey_name&gt; question</strong>: Choose the question you want to map to the satisfaction
+              metric.</p>
+            <p><img src="media/metric-fields.png" alt="Add satisfaction metrics details."
+                title="Add satisfaction metrics details" data-linktype="relative-path"></p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>To see questions from other surveys in the project that are also mapped to the metric, expand the
+          <strong>Other questions using this metric</strong> section.</p>
+      </li>
+      <li>
+        <p>Select <strong>Save</strong>.</p>
+      </li>
+      <li>
+        <p>To add more metrics, repeat steps 3 through 6.</p>
+      </li>
+    </ol>
+    <div class="heading-wrapper" data-heading-level="h2"><a class="anchor-link docon docon-link"
+        href="#edit-satisfaction-metrics" aria-label="Section titled: Edit satisfaction metrics"></a>
+      <h2 id="edit-satisfaction-metrics" class="heading-anchor">Edit satisfaction metrics</h2>
+    </div>
+    <p>After you've created the satisfaction metrics you need, you can edit their details or delete the ones that you
+      don't need.</p>
+    <ol>
+      <li>
+        <p>Open the survey.</p>
+      </li>
+      <li>
+        <p>On the <strong>Design</strong> tab, select <strong>Customization</strong> at the right side of the page, and
+          then select <strong>Satisfaction metrics</strong>.</p>
+      </li>
+      <li>
+        <p>To edit a metric, expand it, and then update the name and description as required. If you change the question
+          that's mapped to the metric, a confirmation message appears. Select <strong>Change</strong> in the
+          confirmation message to continue.</p>
+      </li>
+      <li>
+        <p>Select <strong>Save</strong>.</p>
+      </li>
+      <li>
+        <p>To delete a metric, hover over the metric, and then select <strong>Delete</strong>.</p>
+      </li>
+      <li>
+        <p>In the confirmation message that appears, select <strong>Delete</strong> to continue with the deletion.</p>
+      </li>
+    </ol>
+    <div class="heading-wrapper" data-heading-level="h3"><a class="anchor-link docon docon-link" href="#see-also"
+        aria-label="Section titled: See also"></a>
+      <h3 id="see-also" class="heading-anchor">See also</h3>
+    </div>
+    <p><a href="create-branching-rule" data-linktype="relative-path">Add logic by creating branching rules</a><br>
+      <a href="personalize-survey" data-linktype="relative-path">Personalize your survey by adding variables</a><br>
+      <a href="create-multilingual-survey" data-linktype="relative-path">Create multilingual survey</a><br>
+      <a href="survey-branding" data-linktype="relative-path">Add branding to your survey</a><br>
+      <a href="survey-formatting" data-linktype="relative-path">Add formatting to your survey</a><br>
+      <a href="survey-text-format" data-linktype="relative-path">Add formatting to survey elements</a>
+    </p>
+
+  </div>
+</body>
+
+</html>
