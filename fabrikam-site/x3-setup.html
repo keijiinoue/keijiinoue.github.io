@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>セットアップ手順｜ファブリカム・フライ・X3｜ファブリカム株式会社</title>
+<style>
+:root{
+  --deep:#0E3A5F; --cyan:#00B4D8; --navy:#0A2740; --light:#EAF2F8;
+  --ink:#1a2733; --muted:#5b6b7a; --line:#d6e2ee; --white:#ffffff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Segoe UI","Hiragino Kaku Gothic ProN","Yu Gothic UI",Meiryo,system-ui,sans-serif;
+  color:var(--ink);background:var(--white);line-height:1.75;font-size:16px}
+a{color:var(--deep);text-decoration:none}
+a:hover{text-decoration:underline}
+.demo-banner{background:#fff4d6;color:#7a5b00;font-size:12.5px;text-align:center;padding:6px 12px;border-bottom:1px solid #f0e0a8}
+header.site{background:var(--deep);color:#fff}
+.hdr-inner{max-width:1080px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;letter-spacing:.5px;color:#fff}
+.brand .mark{display:inline-block;width:26px;height:26px;border-radius:6px;
+  background:linear-gradient(135deg,var(--cyan),#0090c0);box-shadow:inset 0 0 0 3px rgba(255,255,255,.25)}
+.brand small{font-weight:500;font-size:11px;opacity:.8;letter-spacing:.5px}
+nav.primary{margin-left:auto;display:flex;gap:16px;flex-wrap:wrap}
+nav.primary a{color:#dbe8f4;font-size:14px;font-weight:600}
+nav.primary a:hover{color:#fff;text-decoration:none}
+.hero{background:linear-gradient(135deg,var(--deep),var(--navy));color:#fff;padding:56px 20px}
+.hero-inner{max-width:1080px;margin:0 auto}
+.hero h1{font-size:30px;margin:0 0 12px;line-height:1.35}
+.hero p{font-size:16px;color:#cfe0ef;max-width:760px;margin:0}
+.eyebrow{display:inline-block;background:rgba(0,180,216,.18);color:#9fe3f7;border:1px solid rgba(0,180,216,.5);
+  border-radius:999px;padding:4px 12px;font-size:12.5px;font-weight:700;margin-bottom:14px}
+main{max-width:1080px;margin:0 auto;padding:40px 20px}
+h2{color:var(--deep);font-size:22px;margin:38px 0 12px;padding-bottom:8px;border-bottom:2px solid var(--light)}
+h3{color:var(--navy);font-size:17px;margin:24px 0 8px}
+p{margin:10px 0}
+.lead{font-size:17px;color:var(--muted)}
+ul,ol{margin:10px 0 10px 1.2em;padding:0}
+li{margin:6px 0}
+table{border-collapse:collapse;width:100%;margin:16px 0;font-size:14.5px}
+th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top}
+th{background:var(--deep);color:#fff;font-weight:700}
+tbody tr:nth-child(even){background:var(--light)}
+.card{border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin:14px 0;background:#fff;
+  box-shadow:0 1px 3px rgba(10,39,64,.06)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.badge{display:inline-block;background:var(--light);color:var(--deep);border:1px solid var(--line);
+  border-radius:6px;padding:2px 10px;font-size:12.5px;font-weight:700;margin:2px 4px 2px 0}
+.note{background:var(--light);border-left:4px solid var(--cyan);border-radius:0 8px 8px 0;padding:12px 16px;margin:16px 0;font-size:14.5px}
+.warn{background:#fff4f0;border-left:4px solid #e0663a;border-radius:0 8px 8px 0;padding:12px 16px;margin:16px 0;font-size:14.5px}
+.crumbs{font-size:13px;color:var(--muted);margin:0 0 4px}
+.crumbs a{color:var(--muted)}
+.cta{display:inline-block;background:var(--cyan);color:#022;padding:11px 22px;border-radius:8px;font-weight:800;margin-top:8px}
+.cta:hover{background:#00c4ee;text-decoration:none}
+.updated{color:var(--muted);font-size:13px}
+footer.site{background:var(--navy);color:#c9d7e5;margin-top:48px;padding:34px 20px}
+.ft-inner{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px}
+footer.site h4{color:#fff;font-size:13px;letter-spacing:.5px;margin:0 0 10px;text-transform:none}
+footer.site a{color:#b7c9db;font-size:13.5px;display:block;margin:5px 0}
+footer.site a:hover{color:#fff}
+.ft-bottom{max-width:1080px;margin:22px auto 0;padding-top:16px;border-top:1px solid #1d3a55;font-size:12px;color:#8ba3bb}
+@media(max-width:640px){.hero h1{font-size:24px}.hdr-inner{gap:10px}nav.primary{gap:12px}}
+</style>
+</head>
+<body>
+<div class="demo-banner">本ページはデモ用サンプルです。企業・人物・製品・数値・URL等はすべて架空であり、実在のものとは一切関係ありません。</div>
+<header class="site"><div class="hdr-inner">
+  <a class="brand" href="index.html"><span class="mark"></span>Fabrikam<small>産業用ドローン</small></a>
+  <nav class="primary">
+    <a href="index.html">ホーム</a>
+    <a href="x3-overview.html">X3 製品概要</a>
+    <a href="x3-features.html">機能詳細</a>
+    <a href="support.html">サポート</a>
+    <a href="security.html">セキュリティ</a>
+    <a href="sla.html">SLA</a>
+  </nav>
+</div></header>
+<section class="hero"><div class="hero-inner">
+<span class="eyebrow">SETUP GUIDE｜FBK-FLY-X3</span>
+<h1>ファブリカム・フライ・X3 セットアップ手順</h1>
+<p>開梱から初期設定、初回飛行前チェックまでを順を追って説明します。手順に沿って進めることで、現場での初回運用を安全かつスムーズに開始できます。すべての飛行は航空法等の法令を順守した適法運用が前提です。</p>
+</div></section>
+<main>
+<p class="crumbs"><a href="index.html">ホーム</a> ／ セットアップ手順</p>
+<p class="updated">最終更新: 2026年7月1日</p>
+
+<div class="note">本手順は日本語マニュアル（FBK-FLY-X3 取扱説明書 v1.2 対応）の要点です。詳細な図解・安全上の注意は同梱の冊子および <a href="support.html">サポート・保守サービス</a> のドキュメント一覧を参照してください。</div>
+
+<h2>STEP 1. 同梱物の確認（開梱）</h2>
+<p>開梱後、まず以下の同梱物がそろっていることを確認してください。輸送中の破損・欠品がある場合は飛行させず、<a href="support.html">サポート窓口</a>へご連絡ください。</p>
+<ul>
+  <li>ファブリカム・フライ・X3 機体本体（型番 FBK-FLY-X3）</li>
+  <li>プロペラ（予備を含む）／専用送信機（コントローラ）</li>
+  <li>インテリジェントバッテリー、充電器、電源ケーブル</li>
+  <li>microSD カード、USB ケーブル、クイックスタートガイド（日本語）</li>
+  <li>（別売アクセサリ）防塵防水強化ケース／予備大容量バッテリー／サーマルキャリブレーションキット</li>
+</ul>
+<div class="warn">プロペラに変形・ひび・欠けがないか毎回点検してください。損傷のあるプロペラは飛行前に必ず交換します。</div>
+
+<h2>STEP 2. 充電</h2>
+<ol>
+  <li>付属の充電器でインテリジェントバッテリーを満充電にします。低温環境では充電に時間がかかる場合があります。</li>
+  <li>送信機（コントローラ）も同様にフル充電します。</li>
+  <li>初回は機体・送信機ともにファームウェア更新に十分な残量を確保するため、80%以上を目安に充電してください。</li>
+</ol>
+<div class="note">動作温度は -20℃〜50℃（カタログ値・当社測定条件、条件により変動）です。充電は常温環境での実施を推奨します。</div>
+
+<h2>STEP 3. アプリ「Fabrikam Flight」のインストールとアカウント連携</h2>
+<ol>
+  <li>お使いのモバイル端末に運用アプリ「Fabrikam Flight」をインストールします。</li>
+  <li>Fabrikam アカウントでサインインします（未取得の場合は新規登録）。</li>
+  <li>組織アカウントを利用する場合は、管理者から付与された権限（ロール）で <a href="integration.html">Fabrikam InsightCloud</a> と連携します。認証・権限管理の詳細は <a href="security.html">セキュリティ</a> を参照してください。</li>
+</ol>
+
+<h2>STEP 4. 機体アクティベーションとファームウェア更新</h2>
+<ol>
+  <li>送信機と機体の電源を入れ、アプリの案内に従って機体をアクティベーションします。</li>
+  <li>ファームウェアのバージョンを確認します。現行は v1.2、v1.3 は2026年7月提供予定です。</li>
+  <li>更新（v1.2→v1.3）が案内された場合は、電源を切らずに完了までお待ちください。アップデートは真正性を検証した署名付きで配信されます（詳細は <a href="security.html">セキュリティ</a>）。</li>
+</ol>
+<div class="warn">ファームウェア更新中は電源・通信を切断しないでください。更新に失敗した場合の対処は <a href="x3-troubleshooting.html">トラブルシューティング</a> を参照してください。</div>
+
+<h2>STEP 5. RTK 測位の設定</h2>
+<p>X3 は GNSS＋RTK による高精度測位（水平 ±1cm＋1ppm／実用 ±2cm、カタログ値）に対応します。用途に応じて次のいずれかを設定します。</p>
+<ul>
+  <li><strong>ネットワーク RTK</strong>：配信サービスの接続情報をアプリに登録します。</li>
+  <li><strong>RTK 基準局</strong>：自局基準点を設置し、機体と接続します。</li>
+</ul>
+
+<h2>STEP 6. キャリブレーション</h2>
+<ol>
+  <li><strong>コンパス（磁気）キャリブレーション</strong>：金属・磁気源から離れた開けた場所で、アプリの案内に従い実施します。</li>
+  <li><strong>IMU キャリブレーション</strong>：機体を水平な場所に静置し実施します。</li>
+  <li><strong>サーマルキャリブレーション（任意）</strong>：サーマルキャリブレーションキットを用いて実施します。サーマルの数値は温度の目安であり、定量診断の断定には用いません。</li>
+</ol>
+
+<h2>STEP 7. 初回飛行前チェックリスト</h2>
+<p>初回飛行の前に、以下をすべて確認してください。</p>
+<table>
+  <thead><tr><th style="width:34%">確認項目</th><th>内容</th></tr></thead>
+  <tbody>
+    <tr><td>飛行空域・許可</td><td>飛行させる空域が飛行可能か、必要な許可・承認を確認（適法運用が前提）</td></tr>
+    <tr><td>機体登録・リモートID</td><td>機体登録が完了し、登録記号の表示・リモートID機能が有効であること</td></tr>
+    <tr><td>GNSS 捕捉</td><td>屋外で十分な衛星を捕捉し、RTK が Fix していること</td></tr>
+    <tr><td>バッテリー</td><td>機体・送信機とも十分な残量（往復と余裕を確保）</td></tr>
+    <tr><td>プロペラ・機体</td><td>プロペラの装着・損傷、ジンバル固定具の取り外し、外観の異常なし</td></tr>
+    <tr><td>周囲環境</td><td>人・建物・障害物との距離、風速（耐風12m/s：カタログ値）、天候の確認</td></tr>
+  </tbody>
+</table>
+<div class="warn">機体登録・登録記号表示・リモートIDの搭載/有効化は航空法上の要件です。詳細は <a href="compliance.html">法令順守・認証</a> を確認し、適法な運用を徹底してください。</div>
+
+<h2>次に読む</h2>
+<p>セットアップが完了したら、離陸から自動巡回・撮影・帰還までの流れを <a href="x3-operation.html">操作手順</a> で確認してください。</p>
+<a class="cta" href="x3-operation.html">操作手順へ進む</a>
+
+</main>
+<footer class="site"><div class="ft-inner">
+  <div>
+    <h4>製品情報</h4>
+    <a href="x3-overview.html">X3 製品概要</a>
+    <a href="x3-features.html">機能詳細・仕様</a>
+    <a href="x3-setup.html">セットアップ手順</a>
+    <a href="x3-operation.html">操作手順</a>
+    <a href="x3-troubleshooting.html">トラブルシューティング</a>
+    <a href="x3-faq.html">サポートFAQ</a>
+  </div>
+  <div>
+    <h4>サポート・連携</h4>
+    <a href="support.html">サポート・保守サービス</a>
+    <a href="integration.html">システム連携・SDK/API</a>
+  </div>
+  <div>
+    <h4>信頼性・ポリシー</h4>
+    <a href="security.html">セキュリティ</a>
+    <a href="sla.html">サービスレベル（SLA）</a>
+    <a href="privacy.html">プライバシーに関する声明</a>
+    <a href="compliance.html">法令順守・認証</a>
+  </div>
+  <div>
+    <h4>会社情報</h4>
+    <a href="index.html">ホーム</a>
+    <p style="font-size:13px;color:#9fb4c8;margin:6px 0 0">ファブリカム株式会社<br>Fabrikam Co., Ltd.（架空）</p>
+  </div>
+</div>
+<div class="ft-bottom">© 2026 Fabrikam Co., Ltd.（架空）｜本サイトはデモ用サンプルです。企業・人物・製品・数値・URL等はすべて架空であり、実在のものとは一切関係ありません。</div>
+</footer>
+</body>
+</html>

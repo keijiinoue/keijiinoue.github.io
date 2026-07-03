@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>操作手順｜ファブリカム・フライ・X3｜ファブリカム株式会社</title>
+<style>
+:root{
+  --deep:#0E3A5F; --cyan:#00B4D8; --navy:#0A2740; --light:#EAF2F8;
+  --ink:#1a2733; --muted:#5b6b7a; --line:#d6e2ee; --white:#ffffff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Segoe UI","Hiragino Kaku Gothic ProN","Yu Gothic UI",Meiryo,system-ui,sans-serif;
+  color:var(--ink);background:var(--white);line-height:1.75;font-size:16px}
+a{color:var(--deep);text-decoration:none}
+a:hover{text-decoration:underline}
+.demo-banner{background:#fff4d6;color:#7a5b00;font-size:12.5px;text-align:center;padding:6px 12px;border-bottom:1px solid #f0e0a8}
+header.site{background:var(--deep);color:#fff}
+.hdr-inner{max-width:1080px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;letter-spacing:.5px;color:#fff}
+.brand .mark{display:inline-block;width:26px;height:26px;border-radius:6px;
+  background:linear-gradient(135deg,var(--cyan),#0090c0);box-shadow:inset 0 0 0 3px rgba(255,255,255,.25)}
+.brand small{font-weight:500;font-size:11px;opacity:.8;letter-spacing:.5px}
+nav.primary{margin-left:auto;display:flex;gap:16px;flex-wrap:wrap}
+nav.primary a{color:#dbe8f4;font-size:14px;font-weight:600}
+nav.primary a:hover{color:#fff;text-decoration:none}
+.hero{background:linear-gradient(135deg,var(--deep),var(--navy));color:#fff;padding:56px 20px}
+.hero-inner{max-width:1080px;margin:0 auto}
+.hero h1{font-size:30px;margin:0 0 12px;line-height:1.35}
+.hero p{font-size:16px;color:#cfe0ef;max-width:760px;margin:0}
+.eyebrow{display:inline-block;background:rgba(0,180,216,.18);color:#9fe3f7;border:1px solid rgba(0,180,216,.5);
+  border-radius:999px;padding:4px 12px;font-size:12.5px;font-weight:700;margin-bottom:14px}
+main{max-width:1080px;margin:0 auto;padding:40px 20px}
+h2{color:var(--deep);font-size:22px;margin:38px 0 12px;padding-bottom:8px;border-bottom:2px solid var(--light)}
+h3{color:var(--navy);font-size:17px;margin:24px 0 8px}
+p{margin:10px 0}
+.lead{font-size:17px;color:var(--muted)}
+ul,ol{margin:10px 0 10px 1.2em;padding:0}
+li{margin:6px 0}
+table{border-collapse:collapse;width:100%;margin:16px 0;font-size:14.5px}
+th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top}
+th{background:var(--deep);color:#fff;font-weight:700}
+tbody tr:nth-child(even){background:var(--light)}
+.card{border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin:14px 0;background:#fff;
+  box-shadow:0 1px 3px rgba(10,39,64,.06)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.badge{display:inline-block;background:var(--light);color:var(--deep);border:1px solid var(--line);
+  border-radius:6px;padding:2px 10px;font-size:12.5px;font-weight:700;margin:2px 4px 2px 0}
+.note{background:var(--light);border-left:4px solid var(--cyan);border-radius:0 8px 8px 0;padding:12px 16px;margin:16px 0;font-size:14.5px}
+.warn{background:#fff4f0;border-left:4px solid #e0663a;border-radius:0 8px 8px 0;padding:12px 16px;margin:16px 0;font-size:14.5px}
+.crumbs{font-size:13px;color:var(--muted);margin:0 0 4px}
+.crumbs a{color:var(--muted)}
+.cta{display:inline-block;background:var(--cyan);color:#022;padding:11px 22px;border-radius:8px;font-weight:800;margin-top:8px}
+.cta:hover{background:#00c4ee;text-decoration:none}
+.updated{color:var(--muted);font-size:13px}
+footer.site{background:var(--navy);color:#c9d7e5;margin-top:48px;padding:34px 20px}
+.ft-inner{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px}
+footer.site h4{color:#fff;font-size:13px;letter-spacing:.5px;margin:0 0 10px;text-transform:none}
+footer.site a{color:#b7c9db;font-size:13.5px;display:block;margin:5px 0}
+footer.site a:hover{color:#fff}
+.ft-bottom{max-width:1080px;margin:22px auto 0;padding-top:16px;border-top:1px solid #1d3a55;font-size:12px;color:#8ba3bb}
+@media(max-width:640px){.hero h1{font-size:24px}.hdr-inner{gap:10px}nav.primary{gap:12px}}
+</style>
+</head>
+<body>
+<div class="demo-banner">本ページはデモ用サンプルです。企業・人物・製品・数値・URL等はすべて架空であり、実在のものとは一切関係ありません。</div>
+<header class="site"><div class="hdr-inner">
+  <a class="brand" href="index.html"><span class="mark"></span>Fabrikam<small>産業用ドローン</small></a>
+  <nav class="primary">
+    <a href="index.html">ホーム</a>
+    <a href="x3-overview.html">X3 製品概要</a>
+    <a href="x3-features.html">機能詳細</a>
+    <a href="support.html">サポート</a>
+    <a href="security.html">セキュリティ</a>
+    <a href="sla.html">SLA</a>
+  </nav>
+</div></header>
+<section class="hero"><div class="hero-inner">
+<span class="eyebrow">OPERATION GUIDE｜FBK-FLY-X3</span>
+<h1>ファブリカム・フライ・X3 操作手順</h1>
+<p>基本操作から自動巡回・点検ルート、可視光/サーマル撮影、自動帰還までの標準的な運用フローを説明します。すべての飛行は航空法等の法令を順守した適法運用が前提です。</p>
+</div></section>
+<main>
+<p class="crumbs"><a href="index.html">ホーム</a> ／ 操作手順</p>
+<p class="updated">最終更新: 2026年7月1日</p>
+
+<div class="warn"><strong>飛行前の必須確認（適法運用）：</strong>飛行空域が飛行可能であること、必要な許可・承認、機体登録と登録記号表示、リモートID機能の有効化を必ず確認してください。詳細は <a href="compliance.html">法令順守・認証</a> を参照。安全に運用する責任は操縦者にあります。</div>
+
+<h2>1. 飛行前の準備</h2>
+<ol>
+  <li><a href="x3-setup.html">セットアップ手順</a>の初回飛行前チェックリストを完了します。</li>
+  <li>アプリ「Fabrikam Flight」で機体状態（バッテリー、GNSS/RTK、ストレージ空き）を確認します。</li>
+  <li>離着陸地点は平坦で開けた場所を選び、周囲の人・建物との安全な距離を確保します。</li>
+</ol>
+
+<h2>2. 基本操作</h2>
+<h3>離陸・ホバリング</h3>
+<ol>
+  <li>送信機→機体の順で電源を入れ、GNSS/RTK が Fix したことを確認します。</li>
+  <li>自動離陸、または手動スロットルで離陸し、低高度で数秒ホバリングして機体の安定を確認します。</li>
+</ol>
+<h3>飛行・撮影</h3>
+<ol>
+  <li>目的の点検対象へ移動します。Sモードでは最大23m/s（カタログ値・条件により変動）まで機動が可能です。</li>
+  <li>ジンバル（3軸手ブレ補正）でカメラアングルを調整し、静止画・動画を撮影します。</li>
+</ol>
+<h3>自動帰還（RTH）</h3>
+<p>ホームボタンで自動帰還（RTH）を開始できます。バッテリー残量低下や通信途絶時にはフェイルセーフとして自動帰還します。帰還経路上の障害物に注意し、必要に応じて手動介入してください。</p>
+<div class="note">最大飛行時間は55分（無風・標準積載時のカタログ値）です。風・積載・気温・飛行様態により実際の飛行時間は変動します。常に余裕を持った運用を行ってください。</div>
+
+<h2>3. 自動巡回・点検ルート</h2>
+<p>橋梁・送電線・プラント設備など、繰り返し点検する対象では自動巡回が有効です。</p>
+<ol>
+  <li>アプリでウェイポイント（通過点）を設定し、高度・速度・カメラ動作を指定します。</li>
+  <li>点検ルートをテンプレートとして保存し、次回以降は同一経路で再現性のある撮影を行えます。</li>
+  <li>RTK±2cm（カタログ値）により同一箇所を高い再現性で記録でき、経年比較に活用できます。</li>
+  <li>障害物検知・回避（6方向ビジョン＋ToF）とジオフェンス設定を併用し、安全マージンを確保します。</li>
+</ol>
+<div class="warn">自動巡回中も操縦者は常に機体を監視し、いつでも手動介入できる体制を保ってください。自律機能は操縦者の判断・監視を代替するものではありません。</div>
+
+<h2>4. 可視光・サーマルの撮影と切替</h2>
+<p>可視光（4/8K・1/1.3型センサー）とサーマル（640×512・放射計測対応、標準搭載）を切り替え、またはデュアルで同時撮影できます。</p>
+<ul>
+  <li>点検対象に応じてカメラを選択し、必要に応じて可視光とサーマルを同時に記録します。</li>
+  <li>サーマル画像は温度の<strong>目安</strong>として活用してください。表示される温度は校正状態・環境条件（放射率・距離・気象等）に依存し、定量的な診断を断定するものではありません。</li>
+</ul>
+
+<h2>5. データ記録と InsightCloud アップロード</h2>
+<ol>
+  <li>撮影データは内蔵ストレージ128GB＋microSD に記録されます。位置情報（ジオタグ）が付与されます。</li>
+  <li>飛行後、<a href="integration.html">Fabrikam InsightCloud</a> にアップロードすると、点検レポートの自動生成・AI解析・経年比較を一気通貫で行えます。</li>
+  <li>AI亀裂検出はひび割れ抽出を省力化する補助機能です。抽出結果の妥当性判断や最終的な点検判定は、有資格者による確認が前提です。</li>
+</ol>
+
+<h2>6. 安全上の注意</h2>
+<ul>
+  <li>人や建物、車両、送電線等との十分な距離を保ち、第三者の上空飛行は避けてください。</li>
+  <li>強風・降雨・雷・視界不良など、悪天候時の飛行は控えてください（耐風12m/s・IP55はカタログ値であり無制限の耐候を保証しません）。</li>
+  <li>バッテリー残量には常に余裕を持ち、警告が出たら速やかに帰還・着陸します。</li>
+  <li>緊急時は安全な場所への即時着陸を優先し、無理な飛行継続を行わないでください。</li>
+</ul>
+<div class="note">トラブル発生時は <a href="x3-troubleshooting.html">トラブルシューティング</a> を、よくある質問は <a href="x3-faq.html">サポートFAQ</a> を参照してください。</div>
+
+</main>
+<footer class="site"><div class="ft-inner">
+  <div>
+    <h4>製品情報</h4>
+    <a href="x3-overview.html">X3 製品概要</a>
+    <a href="x3-features.html">機能詳細・仕様</a>
+    <a href="x3-setup.html">セットアップ手順</a>
+    <a href="x3-operation.html">操作手順</a>
+    <a href="x3-troubleshooting.html">トラブルシューティング</a>
+    <a href="x3-faq.html">サポートFAQ</a>
+  </div>
+  <div>
+    <h4>サポート・連携</h4>
+    <a href="support.html">サポート・保守サービス</a>
+    <a href="integration.html">システム連携・SDK/API</a>
+  </div>
+  <div>
+    <h4>信頼性・ポリシー</h4>
+    <a href="security.html">セキュリティ</a>
+    <a href="sla.html">サービスレベル（SLA）</a>
+    <a href="privacy.html">プライバシーに関する声明</a>
+    <a href="compliance.html">法令順守・認証</a>
+  </div>
+  <div>
+    <h4>会社情報</h4>
+    <a href="index.html">ホーム</a>
+    <p style="font-size:13px;color:#9fb4c8;margin:6px 0 0">ファブリカム株式会社<br>Fabrikam Co., Ltd.（架空）</p>
+  </div>
+</div>
+<div class="ft-bottom">© 2026 Fabrikam Co., Ltd.（架空）｜本サイトはデモ用サンプルです。企業・人物・製品・数値・URL等はすべて架空であり、実在のものとは一切関係ありません。</div>
+</footer>
+</body>
+</html>

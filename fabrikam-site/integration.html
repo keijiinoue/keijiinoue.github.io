@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>システム連携・SDK/API｜ファブリカム・フライ・X3｜ファブリカム株式会社</title>
+<style>
+:root{
+  --deep:#0E3A5F; --cyan:#00B4D8; --navy:#0A2740; --light:#EAF2F8;
+  --ink:#1a2733; --muted:#5b6b7a; --line:#d6e2ee; --white:#ffffff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Segoe UI","Hiragino Kaku Gothic ProN","Yu Gothic UI",Meiryo,system-ui,sans-serif;
+  color:var(--ink);background:var(--white);line-height:1.75;font-size:16px}
+a{color:var(--deep);text-decoration:none}
+a:hover{text-decoration:underline}
+.demo-banner{background:#fff4d6;color:#7a5b00;font-size:12.5px;text-align:center;padding:6px 12px;border-bottom:1px solid #f0e0a8}
+header.site{background:var(--deep);color:#fff}
+.hdr-inner{max-width:1080px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;letter-spacing:.5px;color:#fff}
+.brand .mark{display:inline-block;width:26px;height:26px;border-radius:6px;
+  background:linear-gradient(135deg,var(--cyan),#0090c0);box-shadow:inset 0 0 0 3px rgba(255,255,255,.25)}
+.brand small{font-weight:500;font-size:11px;opacity:.8;letter-spacing:.5px}
+nav.primary{margin-left:auto;display:flex;gap:16px;flex-wrap:wrap}
+nav.primary a{color:#dbe8f4;font-size:14px;font-weight:600}
+nav.primary a:hover{color:#fff;text-decoration:none}
+.hero{background:linear-gradient(135deg,var(--deep),var(--navy));color:#fff;padding:56px 20px}
+.hero-inner{max-width:1080px;margin:0 auto}
+.hero h1{font-size:30px;margin:0 0 12px;line-height:1.35}
+.hero p{font-size:16px;color:#cfe0ef;max-width:760px;margin:0}
+.eyebrow{display:inline-block;background:rgba(0,180,216,.18);color:#9fe3f7;border:1px solid rgba(0,180,216,.5);
+  border-radius:999px;padding:4px 12px;font-size:12.5px;font-weight:700;margin-bottom:14px}
+main{max-width:1080px;margin:0 auto;padding:40px 20px}
+h2{color:var(--deep);font-size:22px;margin:38px 0 12px;padding-bottom:8px;border-bottom:2px solid var(--light)}
+h3{color:var(--navy);font-size:17px;margin:24px 0 8px}
+p{margin:10px 0}
+.lead{font-size:17px;color:var(--muted)}
+ul,ol{margin:10px 0 10px 1.2em;padding:0}
+li{margin:6px 0}
+table{border-collapse:collapse;width:100%;margin:16px 0;font-size:14.5px}
+th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top}
+th{background:var(--deep);color:#fff;font-weight:700}
+tbody tr:nth-child(even){background:var(--light)}
+.card{border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin:14px 0;background:#fff;
+  box-shadow:0 1px 3px rgba(10,39,64,.06)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.badge{display:inline-block;background:var(--light);color:var(--deep);border:1px solid var(--line);
+  border-radius:6px;padding:2px 10px;font-size:12.5px;font-weight:700;margin:2px 4px 2px 0}
+.note{background:var(--light);border-left:4px solid var(--cyan);border-radius:0 8px 8px 0;padding:12px 16px;margin:16px 0;font-size:14.5px}
+.warn{background:#fff4f0;border-left:4px solid #e0663a;border-radius:0 8px 8px 0;padding:12px 16px;margin:16px 0;font-size:14.5px}
+.crumbs{font-size:13px;color:var(--muted);margin:0 0 4px}
+.crumbs a{color:var(--muted)}
+.cta{display:inline-block;background:var(--cyan);color:#022;padding:11px 22px;border-radius:8px;font-weight:800;margin-top:8px}
+.cta:hover{background:#00c4ee;text-decoration:none}
+.updated{color:var(--muted);font-size:13px}
+footer.site{background:var(--navy);color:#c9d7e5;margin-top:48px;padding:34px 20px}
+.ft-inner{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px}
+footer.site h4{color:#fff;font-size:13px;letter-spacing:.5px;margin:0 0 10px;text-transform:none}
+footer.site a{color:#b7c9db;font-size:13.5px;display:block;margin:5px 0}
+footer.site a:hover{color:#fff}
+.ft-bottom{max-width:1080px;margin:22px auto 0;padding-top:16px;border-top:1px solid #1d3a55;font-size:12px;color:#8ba3bb}
+@media(max-width:640px){.hero h1{font-size:24px}.hdr-inner{gap:10px}nav.primary{gap:12px}}
+</style>
+</head>
+<body>
+<div class="demo-banner">本ページはデモ用サンプルです。企業・人物・製品・数値・URL等はすべて架空であり、実在のものとは一切関係ありません。</div>
+<header class="site"><div class="hdr-inner">
+  <a class="brand" href="index.html"><span class="mark"></span>Fabrikam<small>産業用ドローン</small></a>
+  <nav class="primary">
+    <a href="index.html">ホーム</a>
+    <a href="x3-overview.html">X3 製品概要</a>
+    <a href="x3-features.html">機能詳細</a>
+    <a href="support.html">サポート</a>
+    <a href="security.html">セキュリティ</a>
+    <a href="sla.html">SLA</a>
+  </nav>
+</div></header>
+<section class="hero"><div class="hero-inner">
+<span class="eyebrow">INTEGRATION & EXTENSIBILITY</span>
+<h1>システム連携・SDK/API・Fabrikam InsightCloud</h1>
+<p>ファブリカム・フライ・X3 は、Fabrikam InsightCloud と SDK/API により、既存の点検管理・基幹システムと連携できます。撮影から解析・経年比較までを一気通貫で扱い、将来の台数・機能拡張にも対応します。</p>
+</div></section>
+<main>
+<p class="crumbs"><a href="index.html">ホーム</a> ／ システム連携・SDK/API</p>
+<p class="updated">最終更新: 2026年7月1日</p>
+
+<h2>Fabrikam InsightCloud 概要</h2>
+<p>Fabrikam InsightCloud は、点検データを一元管理するクラウド基盤です。現場の撮影から報告書作成までを効率化します。</p>
+<div class="grid">
+  <div class="card"><h3>撮影データ取込</h3><p>可視光・サーマル・位置情報（ジオタグ）付きデータをアップロードして集約します。</p></div>
+  <div class="card"><h3>点検レポート自動生成</h3><p>撮影データから点検レポートの下書きを自動生成し、報告書作成を省力化します。</p></div>
+  <div class="card"><h3>AI 解析</h3><p>AI亀裂検出等でひび割れ抽出を省力化します。最終判断は有資格者による確認が前提です。</p></div>
+  <div class="card"><h3>経年比較</h3><p>RTK±2cm（カタログ値）の位置精度を活かし、同一箇所の時系列比較で変状管理を高度化します。</p></div>
+</div>
+
+<h2>SDK / API による連携</h2>
+<p>SDK／API により、既存の点検管理システムや基幹システムと連携できます。（FR-21・NFR-25）</p>
+<ul>
+  <li><strong>REST API</strong>：データの取得・登録、ジョブ管理などをプログラムから操作。</li>
+  <li><strong>データエクスポート</strong>：撮影・解析データを外部システムへ連携。</li>
+  <li><strong>Webhook</strong>：処理完了などのイベントを外部システムへ通知し、ワークフローを自動化。</li>
+</ul>
+
+<h2>対応データ形式</h2>
+<p>標準的な画像・動画・点群等のフォーマットでエクスポートでき、既存ツール資産を活かせます。（FR-22）</p>
+<table>
+  <thead><tr><th style="width:30%">種別</th><th>主なフォーマット例</th></tr></thead>
+  <tbody>
+    <tr><td>静止画</td><td>JPEG／TIFF</td></tr>
+    <tr><td>動画</td><td>MP4</td></tr>
+    <tr><td>位置情報付き画像／地図</td><td>GeoTIFF</td></tr>
+    <tr><td>点群</td><td>LAS 等</td></tr>
+  </tbody>
+</table>
+
+<h2>認証・アクセス制御</h2>
+<p>API 連携では、API キーおよび OAuth による認証に対応します。利用者認証・ロールベースのアクセス制御（RBAC）と組み合わせ、安全に外部連携を構成できます。詳細な暗号化・監査ログ等の仕組みは <a href="security.html">セキュリティ</a> を参照してください。</p>
+
+<h2>拡張性</h2>
+<p>将来的な台数・機能拡張に対応します。（NFR-25）</p>
+<ul>
+  <li>導入台数の増加（初期数台から段階的な拡張）に対応。</li>
+  <li>マルチテナントによる組織・拠点単位の管理。</li>
+  <li>点検ルートテンプレートの拡充（ファームウェア v1.3：2026年7月提供予定で機能拡張を予定）。</li>
+</ul>
+<div class="note">連携・拡張に関する仕様値はカタログ値であり、構成・条件により変動する場合があります。</div>
+
+<h2>開発者向けドキュメント</h2>
+<p>SDK／API の詳細仕様・サンプル・認証設定などの開発者向けドキュメントは、<a href="support.html">サポート・保守サービス</a> の窓口よりご案内します。連携構成のご相談も承ります。</p>
+<a class="cta" href="support.html">連携について問い合わせる</a>
+
+</main>
+<footer class="site"><div class="ft-inner">
+  <div>
+    <h4>製品情報</h4>
+    <a href="x3-overview.html">X3 製品概要</a>
+    <a href="x3-features.html">機能詳細・仕様</a>
+    <a href="x3-setup.html">セットアップ手順</a>
+    <a href="x3-operation.html">操作手順</a>
+    <a href="x3-troubleshooting.html">トラブルシューティング</a>
+    <a href="x3-faq.html">サポートFAQ</a>
+  </div>
+  <div>
+    <h4>サポート・連携</h4>
+    <a href="support.html">サポート・保守サービス</a>
+    <a href="integration.html">システム連携・SDK/API</a>
+  </div>
+  <div>
+    <h4>信頼性・ポリシー</h4>
+    <a href="security.html">セキュリティ</a>
+    <a href="sla.html">サービスレベル（SLA）</a>
+    <a href="privacy.html">プライバシーに関する声明</a>
+    <a href="compliance.html">法令順守・認証</a>
+  </div>
+  <div>
+    <h4>会社情報</h4>
+    <a href="index.html">ホーム</a>
+    <p style="font-size:13px;color:#9fb4c8;margin:6px 0 0">ファブリカム株式会社<br>Fabrikam Co., Ltd.（架空）</p>
+  </div>
+</div>
+<div class="ft-bottom">© 2026 Fabrikam Co., Ltd.（架空）｜本サイトはデモ用サンプルです。企業・人物・製品・数値・URL等はすべて架空であり、実在のものとは一切関係ありません。</div>
+</footer>
+</body>
+</html>
