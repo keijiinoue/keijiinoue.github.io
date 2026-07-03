@@ -1,1 +1,3 @@
 # keijiinoue.github.io
+
+rebuild
