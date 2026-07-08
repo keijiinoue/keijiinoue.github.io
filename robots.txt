@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /demo-copilot-in-d365cs/
+Disallow: /dynamicsblog-ja-jp/
+
+Sitemap: https://keijiinoue.github.io/fabrikam-site/sitemap.xml
