@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Troubleshooting | Fabrikam Fly X3 | Fabrikam Co., Ltd.</title>
+<meta name="description" content="This troubleshooting guide for the Fabrikam Fly X3 explains how to resolve common issues and error codes in an easy-to-understand way.">
+<style>
+:root{
+  --deep:#0E3A5F; --cyan:#00B4D8; --navy:#0A2740; --light:#EAF2F8;
+  --ink:#1a2733; --muted:#5b6b7a; --line:#d6e2ee; --white:#ffffff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Segoe UI","Hiragino Kaku Gothic ProN","Yu Gothic UI",Meiryo,system-ui,sans-serif;
+  color:var(--ink);background:var(--white);line-height:1.75;font-size:16px}
+a{color:var(--deep);text-decoration:none}
+a:hover{text-decoration:underline}
+.demo-banner{background:#fff4d6;color:#7a5b00;font-size:12.5px;text-align:center;padding:6px 12px;border-bottom:1px solid #f0e0a8}
+header.site{background:var(--deep);color:#fff}
+.hdr-inner{max-width:1080px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;letter-spacing:.5px;color:#fff}
+.brand .mark{display:inline-block;width:26px;height:26px;border-radius:6px;
+  background:linear-gradient(135deg,var(--cyan),#0090c0);box-shadow:inset 0 0 0 3px rgba(255,255,255,.25)}
+.brand small{font-weight:500;font-size:11px;opacity:.8;letter-spacing:.5px}
+nav.primary{margin-left:auto;display:flex;gap:16px;flex-wrap:wrap}
+nav.primary a{color:#dbe8f4;font-size:14px;font-weight:600}
+nav.primary a:hover{color:#fff;text-decoration:none}
+.hero{background:linear-gradient(135deg,var(--deep),var(--navy));color:#fff;padding:56px 20px}
+.hero-inner{max-width:1080px;margin:0 auto}
+.hero h1{font-size:30px;margin:0 0 12px;line-height:1.35}
+.hero p{font-size:16px;color:#cfe0ef;max-width:760px;margin:0}
+.eyebrow{display:inline-block;background:rgba(0,180,216,.18);color:#9fe3f7;border:1px solid rgba(0,180,216,.5);
+  border-radius:999px;padding:4px 12px;font-size:12.5px;font-weight:700;margin-bottom:14px}
+main{max-width:1080px;margin:0 auto;padding:40px 20px}
+h2{color:var(--deep);font-size:22px;margin:38px 0 12px;padding-bottom:8px;border-bottom:2px solid var(--light)}
+h3{color:var(--navy);font-size:17px;margin:24px 0 8px}
+p{margin:10px 0}
+.lead{font-size:17px;color:var(--muted)}
+ul,ol{margin:10px 0 10px 1.2em;padding:0}
+li{margin:6px 0}
+table{border-collapse:collapse;width:100%;margin:16px 0;font-size:14.5px}
+th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top}
+th{background:var(--deep);color:#fff;font-weight:700}
+tbody tr:nth-child(even){background:var(--light)}
+.card{border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin:14px 0;background:#fff;
+  box-shadow:0 1px 3px rgba(10,39,64,.06)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.badge{display:inline-block;background:var(--light);color:var(--deep);border:1px solid var(--line);
+  border-radius:6px;padding:2px 10px;font-size:12.5px;font-weight:700;margin:2px 4px 2px 0}
+.note{background:var(--light);border-left:4px solid var(--cyan);border-radius:0 8px 8px 0;padding:12px 16px;margin:16px 0;font-size:14.5px}
+.warn{background:#fff4f0;border-left:4px solid #e0663a;border-radius:0 8px 8px 0;padding:12px 16px;margin:16px 0;font-size:14.5px}
+.crumbs{font-size:13px;color:var(--muted);margin:0 0 4px}
+.crumbs a{color:var(--muted)}
+.cta{display:inline-block;background:var(--cyan);color:#022;padding:11px 22px;border-radius:8px;font-weight:800;margin-top:8px}
+.cta:hover{background:#00c4ee;text-decoration:none}
+.updated{color:var(--muted);font-size:13px}
+footer.site{background:var(--navy);color:#c9d7e5;margin-top:48px;padding:34px 20px}
+.ft-inner{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px}
+footer.site h4{color:#fff;font-size:13px;letter-spacing:.5px;margin:0 0 10px;text-transform:none}
+footer.site a{color:#b7c9db;font-size:13.5px;display:block;margin:5px 0}
+footer.site a:hover{color:#fff}
+.ft-bottom{max-width:1080px;margin:22px auto 0;padding-top:16px;border-top:1px solid #1d3a55;font-size:12px;color:#8ba3bb}
+@media(max-width:640px){.hero h1{font-size:24px}.hdr-inner{gap:10px}nav.primary{gap:12px}}
+</style>
+</head>
+<body>
+<div class="demo-banner">This page is a demo sample. All companies, individuals, products, figures, and URLs are fictitious and have no relation to anything real.</div>
+<header class="site"><div class="hdr-inner">
+  <a class="brand" href="index.html"><span class="mark"></span>Fabrikam<small>Industrial Drones</small></a>
+  <nav class="primary">
+    <a href="index.html">Home</a>
+    <a href="x3-overview.html">X3 Product Overview</a>
+    <a href="x3-features.html">Features</a>
+    <a href="support.html">Support</a>
+    <a href="security.html">Security</a>
+    <a href="sla.html">SLA</a>
+  </nav>
+</div></header>
+<section class="hero"><div class="hero-inner">
+<span class="eyebrow">TROUBLESHOOTING｜FBK-FLY-X3</span>
+<h1>Fabrikam Fly X3 Troubleshooting</h1>
+<p>This page lists common symptoms along with their likely causes and remedies. If the issue does not improve after taking these steps, do not continue flying the aircraft; contact Support instead.</p>
+</div></section>
+<main>
+<p class="crumbs"><a href="index.html">Home</a> / Troubleshooting</p>
+<p class="updated">Last updated: July 1, 2026</p>
+
+<div class="note">If the issue persists after taking the steps listed here, keep the aircraft in a safe state and contact <a href="support.html">Support &amp; Maintenance Services</a> (Japanese-language support, weekdays 9:00-18:00).</div>
+
+<h2>Flight and Positioning Issues</h2>
+<table>
+  <thead><tr><th style="width:24%">Symptom</th><th style="width:38%">Possible cause</th><th>Remedy</th></tr></thead>
+  <tbody>
+    <tr><td>GNSS/RTK will not Fix</td><td>Insufficient satellite acquisition, overhead obstruction, RTK correction data not received, or incorrect base station/network settings</td><td>Move to an open outdoor area and wait a few minutes. Recheck the RTK connection information and base station settings (<a href="x3-setup.html">Setup Guide</a> STEP 5)</td></tr>
+    <tr><td>Unstable transmission / corrupted video</td><td>Non-line-of-sight conditions, radio interference, distance exceeded, or improper antenna orientation</td><td>Ensure line of sight and point the antenna toward the aircraft. Maximum transmission range is 15 km (catalog value, within line-of-sight and legal limits). Reduce distance and avoid interference sources</td></tr>
+    <tr><td>Cannot take off</td><td>Calibration incomplete, gimbal lock still attached, compass error, or within a geofence</td><td>Recalibrate the compass/IMU, remove the gimbal lock, and confirm the airspace is permitted for flight</td></tr>
+    <tr><td>Aircraft drifts / attitude unstable</td><td>Strong wind (exceeding 12 m/s wind resistance), magnetic interference, or IMU error</td><td>Check wind speed and cancel the flight in adverse conditions. Move away from magnetic sources and recalibrate</td></tr>
+  </tbody>
+</table>
+
+<h2>Power and Battery Issues</h2>
+<table>
+  <thead><tr><th style="width:24%">Symptom</th><th style="width:38%">Possible cause</th><th>Remedy</th></tr></thead>
+  <tbody>
+    <tr><td>Battery error warning</td><td>Low/high temperature, degradation, dirty contacts, or insufficient charge</td><td>Return to room temperature, clean the contacts, and recheck after a full charge. If this does not help, replace with a spare battery</td></tr>
+    <tr><td>Will not power on</td><td>Battery fully depleted or improperly attached</td><td>Charge the battery and attach it securely. Use within the operating temperature range of -20°C to 50°C (catalog value)</td></tr>
+  </tbody>
+</table>
+
+<h2>Imaging, AI, and Cloud Issues</h2>
+<table>
+  <thead><tr><th style="width:24%">Symptom</th><th style="width:38%">Possible cause</th><th>Remedy</th></tr></thead>
+  <tbody>
+    <tr><td>Thermal image looks wrong</td><td>Calibration drift, emissivity/distance conditions, dirty lens, or effects of ambient temperature</td><td>Perform thermal calibration and clean the lens. Readings are an approximate temperature guide only and should not be used for definitive quantitative diagnosis</td></tr>
+    <tr><td>AI crack detection does not work</td><td>Subject out of scope, insufficient image quality, or conditions unsupported by the feature</td><td>Recapture at sufficient resolution and proximity. AI is a supporting feature to reduce manual effort; final judgment requires confirmation by a qualified inspector</td></tr>
+    <tr><td>Cannot upload to InsightCloud</td><td>Network unavailable, expired authentication, insufficient permissions, or insufficient storage space</td><td>Check your connection, sign-in status, and permissions (<a href="security.html">Security</a>). Retry, and if the issue persists check your <a href="integration.html">integration settings</a></td></tr>
+    <tr><td>Firmware update fails</td><td>Communication lost, low power, or operation performed during the update</td><td>Retry with sufficient charge and a stable connection. Do not disconnect power or communication during the update. Contact Support if the issue is not resolved</td></tr>
+  </tbody>
+</table>
+
+<h2>Sample Error Codes (Excerpt)</h2>
+<table>
+  <thead><tr><th style="width:20%">Code</th><th style="width:34%">Meaning</th><th>Suggested remedy</th></tr></thead>
+  <tbody>
+    <tr><td>E-101</td><td>Insufficient GNSS signal</td><td>Move to an open area and wait for satellite acquisition</td></tr>
+    <tr><td>E-205</td><td>Compass interference</td><td>Move away from magnetic sources and recalibrate</td></tr>
+    <tr><td>E-312</td><td>Transmission link degraded</td><td>Ensure line of sight, reduce distance, and avoid interference</td></tr>
+    <tr><td>E-418</td><td>Battery temperature abnormal</td><td>Return to room temperature before use</td></tr>
+    <tr><td>E-530</td><td>Storage write error</td><td>Check/replace the microSD card and free up built-in storage</td></tr>
+    <tr><td>E-604</td><td>Firmware verification error</td><td>Retry the update. Contact Support if the issue is not resolved</td></tr>
+  </tbody>
+</table>
+<div class="note">These error codes are examples; the actual codes shown may vary depending on the firmware version (catalog specifications vary by conditions).</div>
+
+<div class="warn">If the aircraft or battery shows any safety-related abnormality such as smoke, deformation, unusual noise, or signs of a fall, stop using it immediately and do not fly it. Contact <a href="support.html">Support &amp; Maintenance Services</a> (RMA / loaner unit available).</div>
+
+</main>
+<footer class="site"><div class="ft-inner">
+  <div>
+    <h4>Product Information</h4>
+    <a href="x3-overview.html">X3 Product Overview</a>
+    <a href="x3-features.html">Features &amp; Specifications</a>
+    <a href="x3-setup.html">Setup Guide</a>
+    <a href="x3-operation.html">Operation Guide</a>
+    <a href="x3-troubleshooting.html">Troubleshooting</a>
+    <a href="x3-faq.html">Support FAQ</a>
+  </div>
+  <div>
+    <h4>Support &amp; Integration</h4>
+    <a href="support.html">Support &amp; Maintenance Services</a>
+    <a href="integration.html">System Integration / SDK &amp; API</a>
+  </div>
+  <div>
+    <h4>Trust &amp; Policies</h4>
+    <a href="security.html">Security</a>
+    <a href="sla.html">Service Level Agreement (SLA)</a>
+    <a href="privacy.html">Privacy Statement</a>
+    <a href="compliance.html">Compliance &amp; Certifications</a>
+  </div>
+  <div>
+    <h4>Company Information</h4>
+    <a href="index.html">Home</a>
+    <p style="font-size:13px;color:#9fb4c8;margin:6px 0 0">Fabrikam Co., Ltd.<br>Fabrikam Co., Ltd. (fictitious)</p>
+  </div>
+</div>
+<div class="ft-bottom">© 2026 Fabrikam Co., Ltd. (fictitious) | This site is a demo sample. All companies, individuals, products, figures, and URLs are fictitious and have no relation to anything real.</div>
+</footer>
+</body>
+</html>

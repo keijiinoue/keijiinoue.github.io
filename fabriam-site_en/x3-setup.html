@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Setup Guide | Fabrikam Fly X3 | Fabrikam Co., Ltd.</title>
+<meta name="description" content="This guide explains the setup procedure for the Fabrikam Fly X3. It supports a smooth deployment step by step, from unboxing through initial configuration and pre-flight checks.">
+<style>
+:root{
+  --deep:#0E3A5F; --cyan:#00B4D8; --navy:#0A2740; --light:#EAF2F8;
+  --ink:#1a2733; --muted:#5b6b7a; --line:#d6e2ee; --white:#ffffff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Segoe UI","Hiragino Kaku Gothic ProN","Yu Gothic UI",Meiryo,system-ui,sans-serif;
+  color:var(--ink);background:var(--white);line-height:1.75;font-size:16px}
+a{color:var(--deep);text-decoration:none}
+a:hover{text-decoration:underline}
+.demo-banner{background:#fff4d6;color:#7a5b00;font-size:12.5px;text-align:center;padding:6px 12px;border-bottom:1px solid #f0e0a8}
+header.site{background:var(--deep);color:#fff}
+.hdr-inner{max-width:1080px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;letter-spacing:.5px;color:#fff}
+.brand .mark{display:inline-block;width:26px;height:26px;border-radius:6px;
+  background:linear-gradient(135deg,var(--cyan),#0090c0);box-shadow:inset 0 0 0 3px rgba(255,255,255,.25)}
+.brand small{font-weight:500;font-size:11px;opacity:.8;letter-spacing:.5px}
+nav.primary{margin-left:auto;display:flex;gap:16px;flex-wrap:wrap}
+nav.primary a{color:#dbe8f4;font-size:14px;font-weight:600}
+nav.primary a:hover{color:#fff;text-decoration:none}
+.hero{background:linear-gradient(135deg,var(--deep),var(--navy));color:#fff;padding:56px 20px}
+.hero-inner{max-width:1080px;margin:0 auto}
+.hero h1{font-size:30px;margin:0 0 12px;line-height:1.35}
+.hero p{font-size:16px;color:#cfe0ef;max-width:760px;margin:0}
+.eyebrow{display:inline-block;background:rgba(0,180,216,.18);color:#9fe3f7;border:1px solid rgba(0,180,216,.5);
+  border-radius:999px;padding:4px 12px;font-size:12.5px;font-weight:700;margin-bottom:14px}
+main{max-width:1080px;margin:0 auto;padding:40px 20px}
+h2{color:var(--deep);font-size:22px;margin:38px 0 12px;padding-bottom:8px;border-bottom:2px solid var(--light)}
+h3{color:var(--navy);font-size:17px;margin:24px 0 8px}
+p{margin:10px 0}
+.lead{font-size:17px;color:var(--muted)}
+ul,ol{margin:10px 0 10px 1.2em;padding:0}
+li{margin:6px 0}
+table{border-collapse:collapse;width:100%;margin:16px 0;font-size:14.5px}
+th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top}
+th{background:var(--deep);color:#fff;font-weight:700}
+tbody tr:nth-child(even){background:var(--light)}
+.card{border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin:14px 0;background:#fff;
+  box-shadow:0 1px 3px rgba(10,39,64,.06)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.badge{display:inline-block;background:var(--light);color:var(--deep);border:1px solid var(--line);
+  border-radius:6px;padding:2px 10px;font-size:12.5px;font-weight:700;margin:2px 4px 2px 0}
+.note{background:var(--light);border-left:4px solid var(--cyan);border-radius:0 8px 8px 0;padding:12px 16px;margin:16px 0;font-size:14.5px}
+.warn{background:#fff4f0;border-left:4px solid #e0663a;border-radius:0 8px 8px 0;padding:12px 16px;margin:16px 0;font-size:14.5px}
+.crumbs{font-size:13px;color:var(--muted);margin:0 0 4px}
+.crumbs a{color:var(--muted)}
+.cta{display:inline-block;background:var(--cyan);color:#022;padding:11px 22px;border-radius:8px;font-weight:800;margin-top:8px}
+.cta:hover{background:#00c4ee;text-decoration:none}
+.updated{color:var(--muted);font-size:13px}
+footer.site{background:var(--navy);color:#c9d7e5;margin-top:48px;padding:34px 20px}
+.ft-inner{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px}
+footer.site h4{color:#fff;font-size:13px;letter-spacing:.5px;margin:0 0 10px;text-transform:none}
+footer.site a{color:#b7c9db;font-size:13.5px;display:block;margin:5px 0}
+footer.site a:hover{color:#fff}
+.ft-bottom{max-width:1080px;margin:22px auto 0;padding-top:16px;border-top:1px solid #1d3a55;font-size:12px;color:#8ba3bb}
+@media(max-width:640px){.hero h1{font-size:24px}.hdr-inner{gap:10px}nav.primary{gap:12px}}
+</style>
+</head>
+<body>
+<div class="demo-banner">This page is a demo sample. All companies, individuals, products, figures, and URLs are fictitious and have no relation to anything real.</div>
+<header class="site"><div class="hdr-inner">
+  <a class="brand" href="index.html"><span class="mark"></span>Fabrikam<small>Industrial Drones</small></a>
+  <nav class="primary">
+    <a href="index.html">Home</a>
+    <a href="x3-overview.html">X3 Product Overview</a>
+    <a href="x3-features.html">Features</a>
+    <a href="support.html">Support</a>
+    <a href="security.html">Security</a>
+    <a href="sla.html">SLA</a>
+  </nav>
+</div></header>
+<section class="hero"><div class="hero-inner">
+<span class="eyebrow">SETUP GUIDE｜FBK-FLY-X3</span>
+<h1>Fabrikam Fly X3 Setup Guide</h1>
+<p>This guide walks you through unboxing, initial configuration, and pre-first-flight checks. Following these steps will help you start your first on-site operation safely and smoothly. All flights must comply with aviation law and other applicable regulations.</p>
+</div></section>
+<main>
+<p class="crumbs"><a href="index.html">Home</a> / Setup Guide</p>
+<p class="updated">Last updated: July 1, 2026</p>
+
+<div class="note">This guide summarizes the key points of the official manual (compatible with FBK-FLY-X3 User Manual v1.2). For detailed diagrams and safety notices, refer to the included booklet and the document list on the <a href="support.html">Support &amp; Maintenance Services</a> page.</div>
+
+<h2>STEP 1. Checking the Contents (Unboxing)</h2>
+<p>After unboxing, first confirm that the following items are all included. If there is any damage or missing item from shipping, do not fly the unit and contact <a href="support.html">Support</a>.</p>
+<ul>
+  <li>Fabrikam Fly X3 aircraft unit (model FBK-FLY-X3)</li>
+  <li>Propellers (including spares) / dedicated transmitter (controller)</li>
+  <li>Intelligent battery, charger, and power cable</li>
+  <li>microSD card, USB cable, and Quick Start Guide (Japanese)</li>
+  <li>(Optional accessories) Reinforced dust/water-resistant case / spare high-capacity battery / thermal calibration kit</li>
+</ul>
+<div class="warn">Inspect the propellers every time for deformation, cracks, or chips. Always replace damaged propellers before flight.</div>
+
+<h2>STEP 2. Charging</h2>
+<ol>
+  <li>Fully charge the intelligent battery using the included charger. Charging may take longer in low-temperature environments.</li>
+  <li>Likewise, fully charge the transmitter (controller).</li>
+  <li>For the first use, charge both the aircraft and transmitter to at least 80% to ensure sufficient power for the firmware update.</li>
+</ol>
+<div class="note">The operating temperature range is -20°C to 50°C (catalog value measured under Fabrikam's test conditions; actual results vary by conditions). We recommend charging at room temperature.</div>
+
+<h2>STEP 3. Installing the "Fabrikam Flight" App and Linking Your Account</h2>
+<ol>
+  <li>Install the "Fabrikam Flight" operation app on your mobile device.</li>
+  <li>Sign in with your Fabrikam account (or create a new one if you don't have one).</li>
+  <li>If you are using an organization account, link to <a href="integration.html">Fabrikam InsightCloud</a> with the permissions (role) granted by your administrator. See <a href="security.html">Security</a> for details on authentication and permission management.</li>
+</ol>
+
+<h2>STEP 4. Aircraft Activation and Firmware Update</h2>
+<ol>
+  <li>Power on the transmitter and aircraft, then activate the aircraft by following the app's instructions.</li>
+  <li>Check the firmware version. The current version is v1.2; v1.3 is scheduled for release in July 2026.</li>
+  <li>If prompted to update (v1.2 → v1.3), wait for it to complete without powering off. Updates are delivered with verified, signed authenticity (see <a href="security.html">Security</a> for details).</li>
+</ol>
+<div class="warn">Do not disconnect power or communication while a firmware update is in progress. See <a href="x3-troubleshooting.html">Troubleshooting</a> for steps to take if an update fails.</div>
+
+<h2>STEP 5. Configuring RTK Positioning</h2>
+<p>The X3 supports high-precision positioning via GNSS + RTK (horizontal ±1cm + 1ppm / practical ±2cm, catalog values). Configure one of the following depending on your use case.</p>
+<ul>
+  <li><strong>Network RTK</strong>: Register the connection information for the correction data service in the app.</li>
+  <li><strong>RTK base station</strong>: Set up your own base station and connect it to the aircraft.</li>
+</ul>
+
+<h2>STEP 6. Calibration</h2>
+<ol>
+  <li><strong>Compass (magnetic) calibration</strong>: Perform this in an open area away from metal and magnetic sources, following the app's instructions.</li>
+  <li><strong>IMU calibration</strong>: Perform this with the aircraft placed on a level surface.</li>
+  <li><strong>Thermal calibration (optional)</strong>: Perform this using the thermal calibration kit. Thermal readings are approximate temperature indicators and should not be used to make definitive quantitative diagnoses.</li>
+</ol>
+
+<h2>STEP 7. Pre-First-Flight Checklist</h2>
+<p>Confirm all of the following before your first flight.</p>
+<table>
+  <thead><tr><th style="width:34%">Check item</th><th>Details</th></tr></thead>
+  <tbody>
+    <tr><td>Flight airspace &amp; permits</td><td>Confirm the airspace is permitted for flight and that any required permits/approvals are in place (lawful operation is a prerequisite)</td></tr>
+    <tr><td>Aircraft registration &amp; Remote ID</td><td>Aircraft registration is complete, the registration number is displayed, and Remote ID is enabled</td></tr>
+    <tr><td>GNSS acquisition</td><td>Sufficient satellites acquired outdoors and RTK is Fixed</td></tr>
+    <tr><td>Battery</td><td>Sufficient charge remaining for both aircraft and transmitter (with margin for a round trip)</td></tr>
+    <tr><td>Propellers &amp; aircraft</td><td>Propellers properly attached and undamaged, gimbal lock removed, no visible abnormalities</td></tr>
+    <tr><td>Surrounding environment</td><td>Distance from people, structures, and obstacles; wind speed (12 m/s wind resistance: catalog value); and weather conditions confirmed</td></tr>
+  </tbody>
+</table>
+<div class="warn">Aircraft registration, display of the registration number, and installation/activation of Remote ID are requirements under aviation law. See <a href="compliance.html">Compliance &amp; Certifications</a> for details, and ensure lawful operation at all times.</div>
+
+<h2>What to Read Next</h2>
+<p>Once setup is complete, see the <a href="x3-operation.html">Operation Guide</a> for the workflow from takeoff through automated patrol, capture, and return.</p>
+<a class="cta" href="x3-operation.html">Go to Operation Guide</a>
+
+</main>
+<footer class="site"><div class="ft-inner">
+  <div>
+    <h4>Product Information</h4>
+    <a href="x3-overview.html">X3 Product Overview</a>
+    <a href="x3-features.html">Features &amp; Specifications</a>
+    <a href="x3-setup.html">Setup Guide</a>
+    <a href="x3-operation.html">Operation Guide</a>
+    <a href="x3-troubleshooting.html">Troubleshooting</a>
+    <a href="x3-faq.html">Support FAQ</a>
+  </div>
+  <div>
+    <h4>Support &amp; Integration</h4>
+    <a href="support.html">Support &amp; Maintenance Services</a>
+    <a href="integration.html">System Integration / SDK &amp; API</a>
+  </div>
+  <div>
+    <h4>Trust &amp; Policies</h4>
+    <a href="security.html">Security</a>
+    <a href="sla.html">Service Level Agreement (SLA)</a>
+    <a href="privacy.html">Privacy Statement</a>
+    <a href="compliance.html">Compliance &amp; Certifications</a>
+  </div>
+  <div>
+    <h4>Company Information</h4>
+    <a href="index.html">Home</a>
+    <p style="font-size:13px;color:#9fb4c8;margin:6px 0 0">Fabrikam Co., Ltd.<br>Fabrikam Co., Ltd. (fictitious)</p>
+  </div>
+</div>
+<div class="ft-bottom">© 2026 Fabrikam Co., Ltd. (fictitious) | This site is a demo sample. All companies, individuals, products, figures, and URLs are fictitious and have no relation to anything real.</div>
+</footer>
+</body>
+</html>
